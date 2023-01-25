@@ -1,0 +1,6 @@
+h6.h6.form-title {
+    color: var(--orange-yellow-crayola);
+    text-transform: capitalize;
+    text-align: center;
+    font-size: initial;
+}

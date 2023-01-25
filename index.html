@@ -16,6 +16,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/custom.css">
 
   <!--
     - google font link
@@ -1156,8 +1157,8 @@
         <section class="contact-form">
 
           <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
+          <h6 class="h6 form-title" id="success-message" style="display: none;">Email Send Successfully!</h6>
+          <form method="POST" action="https://script.google.com/macros/s/AKfycbxoXQp_pMutt1LN5ulS4kWVAGwVWgm1AgmWc-3EV3aOh5CfThOYn188j9_aXpLL9_kzRg/exec" class="form" id="my-form" data-form>
 
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
@@ -1198,6 +1199,24 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+  <script>
+      window.addEventListener("load", function() {
+      const form = document.getElementById('my-form');
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        const action = e.target.action;
+        fetch(action, {
+          method: 'POST',
+          body: data,
+        })
+        .then(() => {
+          document.getElementById('success-message').style.display = "block";
+          form.reset();
+        })
+      });
+    });
+  </script>
 </body>
 
 </html>
