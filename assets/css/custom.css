@@ -4,3 +4,7 @@ h6.h6.form-title {
     text-align: center;
     font-size: initial;
 }
+
+.clients-item img{
+    filter: none !important;
+}
