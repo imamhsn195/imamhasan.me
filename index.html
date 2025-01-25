@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Imam Hasan</title>
 
+
   <!--
     - favicon
   -->
@@ -46,7 +47,7 @@
       - #SIDEBAR
     -->
 
-    <aside class="sidebar" data-sidebar>
+    <aside class="sidebar active" data-sidebar>
 
       <div class="sidebar-info">
 
@@ -121,15 +122,30 @@
           <li class="contact-item">
 
             <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
+              <ion-icon name="document-text-outline"></ion-icon>
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Address</p>
-
-              <address>
-                <a href="https://goo.gl/maps/qGRPHGjtvpyLdoVV8" style="white-space: normal;" class="contact-link">7-12, Opp. Emirates Driving School - Dubai</a>
-              </address>
+              <p class="contact-title">Resume</p>
+              <button 
+                data-component="IconButton" 
+                type="button" 
+                aria-label="Download raw content" 
+                data-testid="download-raw-button" 
+                data-loading="false" 
+                data-no-visuals="true" 
+                data-size="small" 
+                data-variant="default" 
+                aria-describedby=":Rtcsptal9lab:-loading-announcement" 
+                data-hotkey="Control+Shift+S"
+                onclick="downloadResume()"
+                style="color: white; padding: 10px 20px; border-radius: 4px; font-size: 14px; cursor: pointer; display: inline-block; align-items: center; justify-content: center; transition: background-color 0.3s ease, border-color 0.3s ease;">
+                Download
+                <svg aria-hidden="true" focusable="false" class="octicon octicon-download" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible; margin-right: 8px;">
+                  <path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"></path>
+                  <path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"></path>
+                </svg>
+              </button>
             </div>
 
           </li>
@@ -221,9 +237,26 @@
         </header>
 
         <section class="about-text">
+
+          <p>Assalamu Alaikum,</p>
+
+          <p>Thanks for reaching out—it’s great to get you!</p>
+
           <p>
+            I’m a skilled Software Engineer with <b>5+ years of experience in Laravel</b> and <b>2+ years in Spring Boot</b>, along with expertise in API development and testing with Postman and Swagger. I’ve worked on <b>ERP systems, commercial websites, POS systems</b>, and <b>inventory management solutions</b>, focusing on creating scalable and efficient applications.
+          </p>  
+
+          <p>
+            I’m also experienced in <b>MySQL database design</b>, version control with Git, and collaborating with teams using GitLab and Slack. My work in <b>Laravel</b> includes building dynamic dashboards, payment gateway integrations, and RESTful APIs, ensuring high-quality solutions and seamless user experiences tailored to client needs.
+          </p>  
+
+          <p>
+            Let me know if you’d like to chat more about my experience! 
+          </p> 
+
+          <!-- <p>
             I am a skilled Software Engineer with expertise in Spring Boot, API development, testing with Postman and Swagger, and project management using Jira. I have experience in building and maintaining ERP systems, commercial websites, POS systems, and inventory management solutions. My work also includes database design with MySQL, version control with Git, and collaborating with teams using GitLab and Slack. With a focus on creating scalable and efficient applications, I deliver high-quality solutions tailored to meet client needs while ensuring seamless user experiences.
-          </p>
+          </p> -->
         </section>
 
 
