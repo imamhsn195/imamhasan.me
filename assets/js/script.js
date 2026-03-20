@@ -1,159 +1,153 @@
 'use strict';
 
+const GITHUB_USERNAME = 'imamhsn195';
 
+const menuToggle = document.getElementById('menu-toggle');
+const siteNav = document.getElementById('site-nav');
+const navLinks = Array.from(document.querySelectorAll('.nav-link'));
+const sections = Array.from(document.querySelectorAll('main section[id]'));
+const revealItems = Array.from(document.querySelectorAll('[data-reveal]'));
 
-// element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
+const yearNode = document.getElementById('year');
+const repoGrid = document.getElementById('repo-grid');
+const statRepos = document.getElementById('gh-repos');
+const statFollowers = document.getElementById('gh-followers');
+const statFollowing = document.getElementById('gh-following');
+const statAge = document.getElementById('gh-age');
 
-
-
-// sidebar variables
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-
-// sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
-
-
-
-// testimonials variables
-const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
-const modalContainer = document.querySelector("[data-modal-container]");
-const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
-const overlay = document.querySelector("[data-overlay]");
-
-// modal variable
-const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
-
-// modal toggle function
-const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
+if (yearNode) {
+  yearNode.textContent = new Date().getFullYear().toString();
 }
 
-// add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
-
-  testimonialsItem[i].addEventListener("click", function () {
-
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
-
-    testimonialsModalFunc();
-
-  });
-
-}
-
-// add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
-
-
-
-// custom select variables
-// const select = document.querySelector("[data-select]");
-// const selectItems = document.querySelectorAll("[data-select-item]");
-// const selectValue = document.querySelector("[data-selecct-value]");
-// const filterBtn = document.querySelectorAll("[data-filter-btn]");
-
-// select.addEventListener("click", function () { elementToggleFunc(this); });
-
-// add event in all select items
-// for (let i = 0; i < selectItems.length; i++) {
-//   selectItems[i].addEventListener("click", function () {
-
-//     let selectedValue = this.innerText.toLowerCase();
-//     selectValue.innerText = this.innerText;
-//     elementToggleFunc(select);
-//     filterFunc(selectedValue);
-
-//   });
-// }
-
-// filter variables
-const filterItems = document.querySelectorAll("[data-filter-item]");
-
-const filterFunc = function (selectedValue) {
-
-  for (let i = 0; i < filterItems.length; i++) {
-
-    if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
-    }
-
-  }
-
-}
-
-// add event in all filter button items for large screen
-// let lastClickedBtn = filterBtn[0];
-
-// for (let i = 0; i < filterBtn.length; i++) {
-
-//   filterBtn[i].addEventListener("click", function () {
-
-//     let selectedValue = this.innerText.toLowerCase();
-//     selectValue.innerText = this.innerText;
-//     filterFunc(selectedValue);
-
-//     lastClickedBtn.classList.remove("active");
-//     this.classList.add("active");
-//     lastClickedBtn = this;
-
-//   });
-
-// }
-
-
-
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
-
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
-
+if (menuToggle && siteNav) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = siteNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
   });
 }
 
-
-
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
-
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+navLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    if (siteNav && siteNav.classList.contains('open')) {
+      siteNav.classList.remove('open');
+      if (menuToggle) {
+        menuToggle.setAttribute('aria-expanded', 'false');
       }
     }
-
   });
+});
+
+const sectionObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+
+      const id = entry.target.getAttribute('id');
+      navLinks.forEach((link) => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+      });
+    });
+  },
+  { rootMargin: '-40% 0px -45% 0px', threshold: 0.05 }
+);
+
+sections.forEach((section) => sectionObserver.observe(section));
+
+const revealObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('revealed');
+      observer.unobserve(entry.target);
+    });
+  },
+  { threshold: 0.16 }
+);
+
+revealItems.forEach((item) => revealObserver.observe(item));
+
+function formatAccountAge(createdAt) {
+  const created = new Date(createdAt);
+  const now = new Date();
+  let years = now.getFullYear() - created.getFullYear();
+  let months = now.getMonth() - created.getMonth();
+
+  if (months < 0) {
+    years -= 1;
+    months += 12;
+  }
+
+  if (years <= 0) return `${months} mo`;
+  return `${years} yr${years > 1 ? 's' : ''}`;
 }
+
+function toReadableNumber(value) {
+  return new Intl.NumberFormat('en-US').format(value);
+}
+
+function renderRepoItems(repos) {
+  if (!repoGrid) return;
+
+  if (!repos.length) {
+    repoGrid.innerHTML = '<li class="glass-card repo-placeholder">No public repositories found.</li>';
+    return;
+  }
+
+  repoGrid.innerHTML = repos
+    .map((repo) => {
+      const language = repo.language || 'Mixed';
+      const stars = repo.stargazers_count || 0;
+      const updatedAt = new Date(repo.updated_at).toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+      });
+
+      return `
+        <li class="glass-card repo-item">
+          <h4><a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">${repo.name}</a></h4>
+          <p>${repo.description || 'No description provided for this repository yet.'}</p>
+          <div class="repo-meta">
+            <span>${language}</span>
+            <span>★ ${toReadableNumber(stars)}</span>
+            <span>Updated ${updatedAt}</span>
+          </div>
+        </li>
+      `;
+    })
+    .join('');
+}
+
+async function loadGitHubData() {
+  const profileUrl = `https://api.github.com/users/${GITHUB_USERNAME}`;
+  const reposUrl = `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6`;
+
+  try {
+    const [profileResponse, reposResponse] = await Promise.all([fetch(profileUrl), fetch(reposUrl)]);
+
+    if (!profileResponse.ok || !reposResponse.ok) {
+      throw new Error('GitHub API request failed');
+    }
+
+    const profile = await profileResponse.json();
+    const repos = await reposResponse.json();
+
+    if (statRepos) statRepos.textContent = toReadableNumber(profile.public_repos || 0);
+    if (statFollowers) statFollowers.textContent = toReadableNumber(profile.followers || 0);
+    if (statFollowing) statFollowing.textContent = toReadableNumber(profile.following || 0);
+    if (statAge) statAge.textContent = formatAccountAge(profile.created_at);
+
+    renderRepoItems(Array.isArray(repos) ? repos : []);
+  } catch (error) {
+    if (repoGrid) {
+      repoGrid.innerHTML =
+        '<li class="glass-card repo-placeholder">Unable to load GitHub data right now. Please refresh or check connection.</li>';
+    }
+    if (statRepos) statRepos.textContent = 'N/A';
+    if (statFollowers) statFollowers.textContent = 'N/A';
+    if (statFollowing) statFollowing.textContent = 'N/A';
+    if (statAge) statAge.textContent = 'N/A';
+  }
+}
+
+loadGitHubData();
