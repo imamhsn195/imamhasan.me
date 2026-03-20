@@ -1,1672 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Imam Hasan</title>
-
-
-  <!--
-    - favicon
-  -->
+  <meta name="description" content="Imam Hasan - Software Engineer specializing in Spring Boot, Laravel, API development, and ERP solutions.">
+  <title>Imam Hasan | Software Engineer</title>
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/custom.css">
-
-  <!--
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    .dev_tools_img{
-      width: 70% !important;
-    }
-    figure.avatar-box {
-      background: transparent;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/custom.css">
 </head>
-
 <body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="gradient-orb gradient-orb-1" aria-hidden="true"></div>
+  <div class="gradient-orb gradient-orb-2" aria-hidden="true"></div>
 
-  <!--
-    - #MAIN
-  -->
+  <header class="site-header" id="home">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand">Imam Hasan</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#education" class="nav-link">Credentials</a>
+        <a href="#github" class="nav-link">GitHub</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
 
   <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar active" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/imam_hasan.png" alt="Imam Hasan" width="80" style="border-radius: 50%;">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Imam Hasan">Imam Hasan</h1>
-          <span class="title" style="margin-block-end: 0.2rem;">Spring Boot & Laravel</span>
-          <span class="title" style="margin-block-end: 0.2rem;">API Development & Testing</span>
-          <span class="title" style="margin-block-end: 0.2rem;">Project Management (Jira)</span>
-          <span class="title" style="margin-block-end: 0.2rem;">Version Control (Git)</span>
+    <section class="hero container" data-reveal>
+      <div class="hero-content">
+        <p class="eyebrow">Software Engineer • Spring Boot & Laravel Specialist</p>
+        <h1>Building reliable APIs and scalable ERP platforms for real-world business operations.</h1>
+        <p class="lead">
+          I am Imam Hasan, a backend-focused software engineer based in Dubai, UAE. I design and build secure systems with Java Spring Boot and PHP Laravel, deliver clean API contracts, and help teams ship faster with better collaboration workflows.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Let's work together</a>
+          <a href="./Latest%20Resume.pdf" class="btn btn-secondary" download>Download Resume</a>
         </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
+        <div class="hero-stats">
+          <article>
+            <h3>8+ Years</h3>
+            <p>Software delivery experience</p>
+          </article>
+          <article>
+            <h3>5+ Years</h3>
+            <p>Laravel in production systems</p>
+          </article>
+          <article>
+            <h3>2+ Years</h3>
+            <p>Spring Boot services</p>
+          </article>
+          <article>
+            <h3>Dubai</h3>
+            <p>Based in UAE, open globally</p>
+          </article>
+        </div>
       </div>
 
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:imamhsn195@gmail.com" class="contact-link">imamhsn195@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+971 528575908" class="contact-link">+971 528575908</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1994-01-20">January 20, 1994</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="document-text-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Resume</p>
-              <button 
-                data-component="IconButton" 
-                type="button" 
-                aria-label="Download raw content" 
-                data-testid="download-raw-button" 
-                data-loading="false" 
-                data-no-visuals="true" 
-                data-size="small" 
-                data-variant="default" 
-                aria-describedby=":Rtcsptal9lab:-loading-announcement" 
-                data-hotkey="Control+Shift+S"
-                onclick="downloadResume()"
-                style="color: white; padding: 10px 20px; border-radius: 4px; font-size: 14px; cursor: pointer; display: inline-block; align-items: center; justify-content: center; transition: background-color 0.3s ease, border-color 0.3s ease;">
-                Download
-                <svg aria-hidden="true" focusable="false" class="octicon octicon-download" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible; margin-right: 8px;">
-                  <path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"></path>
-                  <path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"></path>
-                </svg>
-              </button>
-            </div>
-
-          </li>
-
+      <aside class="profile-card">
+        <img src="./assets/images/imam_hasan.png" alt="Imam Hasan profile photo" class="profile-photo">
+        <h2>Imam Hasan</h2>
+        <p class="profile-role">Software Engineer</p>
+        <ul class="tag-list">
+          <li>Spring Boot</li>
+          <li>Laravel</li>
+          <li>REST API</li>
+          <li>MySQL</li>
+          <li>Postman</li>
+          <li>Swagger</li>
+          <li>Jira</li>
+          <li>Git</li>
         </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://www.facebook.com/hasanhossen" class="social-link" target="_blank">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://twitter.com/Imamhsn" class="social-link" target="_blank">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://github.com/imamhsn195" class="social-link" target="_blank">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
+        <ul class="social-links">
+          <li><a href="mailto:imamhsn195@gmail.com" aria-label="Email"><ion-icon name="mail-outline"></ion-icon></a></li>
+          <li><a href="https://github.com/imamhsn195" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><ion-icon name="logo-github"></ion-icon></a></li>
+          <li><a href="https://twitter.com/Imamhsn" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="https://www.facebook.com/hasanhossen" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a></li>
         </ul>
+      </aside>
+    </section>
 
+    <section class="section container" id="about" data-reveal>
+      <div class="section-head">
+        <p class="eyebrow">About</p>
+        <h2>Modern backend engineering with business-first thinking</h2>
       </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <!-- <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li> -->
-
-          <!-- <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li> -->
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-
-          <p>Assalamu Alaikum,</p>
-
-          <p>Thanks for reaching out—it’s great to get you!</p>
-
+      <div class="about-grid">
+        <article class="glass-card">
+          <h3>What I deliver</h3>
+          <ul>
+            <li>Scalable backend services using Spring Boot and Laravel</li>
+            <li>API design, implementation, testing, and documentation</li>
+            <li>ERP, inventory, and operational workflow modules</li>
+            <li>Database modeling and performance optimization with MySQL</li>
+          </ul>
+        </article>
+        <article class="glass-card">
+          <h3>Problem domains I handled</h3>
           <p>
-            I’m a skilled Software Engineer with <b>5+ years of experience in Laravel</b> and <b>2+ years in Spring Boot</b>, along with expertise in API development and testing with Postman and Swagger. I’ve worked on <b>ERP systems, commercial websites, POS systems</b>, and <b>inventory management solutions</b>, focusing on creating scalable and efficient applications.
-          </p>  
-
+            I have worked on business-critical modules including company and vehicle licensing, passport and visa workflows, labor card management, Emirates ID operations, traffic code flows, COD collection, and e-establishment systems.
+          </p>
           <p>
-            I’m also experienced in <b>MySQL database design</b>, version control with Git, and collaborating with teams using GitLab and Slack. My work in <b>Laravel</b> includes building dynamic dashboards, payment gateway integrations, and RESTful APIs, ensuring high-quality solutions and seamless user experiences tailored to client needs.
-          </p>  
+            My approach combines engineering quality, clear communication, and practical delivery velocity so teams can ship with confidence.
+          </p>
+        </article>
+      </div>
+    </section>
 
+    <section class="section container" id="experience" data-reveal>
+      <div class="section-head">
+        <p class="eyebrow">Experience</p>
+        <h2>Career timeline</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-meta">Jan 2021 - Present</div>
+          <h3>Software Engineer • Zone Delivery Services</h3>
+          <p>Leading backend development for ERP services in Spring Boot and Laravel.</p>
+          <ul>
+            <li>Built and maintained high-impact ERP modules and web services</li>
+            <li>Documented and tested APIs with Swagger and Postman</li>
+            <li>Collaborated with GitHub and Jira-based team workflows</li>
+            <li>Optimized MySQL data operations for operational reliability</li>
+          </ul>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-meta">Oct 2019 - Jan 2021</div>
+          <h3>Software Engineer (Laravel) • Ringer Soft</h3>
+          <p>Delivered ERP enhancements, module integration, and client-facing issue resolution.</p>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-meta">Nov 2018 - Sep 2019</div>
+          <h3>Junior Software Engineer • CGIT</h3>
+          <p>Developed Laravel applications, handled MySQL design, and built responsive interfaces.</p>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-meta">Apr 2017 - Oct 2017</div>
+          <h3>Web Designer & Developer • Corporate Solution</h3>
+          <p>Worked on WordPress websites, SEO, and brand-oriented web design delivery.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="skills" data-reveal>
+      <div class="section-head">
+        <p class="eyebrow">Skills</p>
+        <h2>Technical toolbox</h2>
+      </div>
+      <div class="skills-grid">
+        <article class="glass-card">
+          <h3>Backend</h3>
+          <div class="skill-row"><span>Laravel</span><span>Advanced</span></div>
+          <div class="bar"><span style="width: 88%"></span></div>
+          <div class="skill-row"><span>Spring Boot</span><span>Advanced</span></div>
+          <div class="bar"><span style="width: 80%"></span></div>
+          <div class="skill-row"><span>API Development</span><span>Advanced</span></div>
+          <div class="bar"><span style="width: 86%"></span></div>
+        </article>
+
+        <article class="glass-card">
+          <h3>Data & Quality</h3>
+          <div class="skill-row"><span>MySQL</span><span>Strong</span></div>
+          <div class="bar"><span style="width: 78%"></span></div>
+          <div class="skill-row"><span>Postman / Swagger</span><span>Strong</span></div>
+          <div class="bar"><span style="width: 82%"></span></div>
+          <div class="skill-row"><span>JUnit / Mockito</span><span>Working</span></div>
+          <div class="bar"><span style="width: 70%"></span></div>
+        </article>
+
+        <article class="glass-card">
+          <h3>Delivery & Collaboration</h3>
+          <div class="skill-row"><span>Git / GitHub / GitLab</span><span>Advanced</span></div>
+          <div class="bar"><span style="width: 90%"></span></div>
+          <div class="skill-row"><span>Jira / Trello</span><span>Strong</span></div>
+          <div class="bar"><span style="width: 80%"></span></div>
+          <div class="skill-row"><span>Slack</span><span>Strong</span></div>
+          <div class="bar"><span style="width: 78%"></span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="education" data-reveal>
+      <div class="section-head">
+        <p class="eyebrow">Credentials</p>
+        <h2>Education & professional training</h2>
+      </div>
+      <div class="credentials-grid">
+        <article class="glass-card">
+          <h3>Education</h3>
+          <ul>
+            <li><strong>M.B.A. (Finance & Banking)</strong> - International Islamic University Chittagong (2017 - 2018)</li>
+            <li><strong>B.B.A. (Finance & Banking)</strong> - International Islamic University Chittagong (2014 - 2017)</li>
+            <li><strong>Higher Secondary Certificate</strong> - Govt. City College (2010 - 2011)</li>
+            <li><strong>Secondary School Certificate</strong> - Sanowara Islam Boys' High School (2009 - 2010)</li>
+          </ul>
+        </article>
+        <article class="glass-card">
+          <h3>Training</h3>
+          <ul>
+            <li>Spring Boot Unit Testing with JUnit, Mockito, and MockMvc (Udemy, 2023)</li>
+            <li>IsDB-BISEW Diploma in Web Application Development with PHP Frameworks (2018 - 2019)</li>
+            <li>Computer Fundamental Prerequisite Course (IsDB-BISEW, 2018)</li>
+            <li>New Horizons Internet Professional Program (2017)</li>
+            <li>Office Management Training Course (2010)</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="github" data-reveal>
+      <div class="section-head">
+        <p class="eyebrow">Live Public Profile</p>
+        <h2>GitHub insights</h2>
+      </div>
+      <div class="github-summary" id="github-summary">
+        <article class="glass-card stat-card">
+          <p>Public Repositories</p>
+          <h3 id="gh-repos">--</h3>
+        </article>
+        <article class="glass-card stat-card">
+          <p>Followers</p>
+          <h3 id="gh-followers">--</h3>
+        </article>
+        <article class="glass-card stat-card">
+          <p>Following</p>
+          <h3 id="gh-following">--</h3>
+        </article>
+        <article class="glass-card stat-card">
+          <p>GitHub Since</p>
+          <h3 id="gh-age">--</h3>
+        </article>
+      </div>
+      <div class="repo-header">
+        <h3>Featured repositories</h3>
+        <a href="https://github.com/imamhsn195?tab=repositories" target="_blank" rel="noopener noreferrer">View all</a>
+      </div>
+      <ul class="repo-grid" id="repo-grid">
+        <li class="glass-card repo-placeholder">Loading repositories from your public profile...</li>
+      </ul>
+    </section>
+
+    <section class="section container" data-reveal>
+      <div class="section-head">
+        <p class="eyebrow">Testimonials</p>
+        <h2>Client feedback</h2>
+      </div>
+      <div class="testimonials-grid">
+        <article class="glass-card quote-card">
+          <h3>Elite Zone Delivery Services</h3>
           <p>
-            Let me know if you’d like to chat more about my experience! 
-          </p> 
+            "We have no hesitation in recommending Imam as a Web Application Developer. His dedication, technical expertise, and team-oriented mindset make him a valuable asset."
+          </p>
+        </article>
+        <article class="glass-card quote-card">
+          <h3>Asia Fashion</h3>
+          <p>
+            "We were very pleased with the work done. He has strong experience and is very concerned about client needs."
+          </p>
+        </article>
+        <article class="glass-card quote-card">
+          <h3>Ringer Soft Ltd.</h3>
+          <p>
+            "Consistent delivery quality and practical problem solving made collaboration smooth and effective."
+          </p>
+        </article>
+      </div>
+    </section>
 
-          <!-- <p>
-            I am a skilled Software Engineer with expertise in Spring Boot, API development, testing with Postman and Swagger, and project management using Jira. I have experience in building and maintaining ERP systems, commercial websites, POS systems, and inventory management solutions. My work also includes database design with MySQL, version control with Git, and collaborating with teams using GitLab and Slack. With a focus on creating scalable and efficient applications, I deliver high-quality solutions tailored to meet client needs while ensuring seamless user experiences.
-          </p> -->
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/Spring Boot & Laravel.jpg" alt="design icon" width="100">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Spring Boot & Laravel</h4>
-
-                <p class="service-item-text">
-                  Developing scalable backend applications with Java (Spring Boot) and PHP (Laravel).
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/API Development & Testing.jpg" alt="Web development icon" width="100">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">API Development & Testing</h4>
-
-                <p class="service-item-text">
-                  Creating and testing APIs with tools like Postman and Swagger.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/Project Management (Jira).jpg" alt="mobile app icon" width="100">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Project Management (Jira)</h4>
-
-                <p class="service-item-text">
-                  Managing tasks, sprints, and team collaboration efficiently.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/Version Control (Git).jpg" alt="camera icon" width="100">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Version Control (Git)</h4>
-
-                <p class="service-item-text">
-                  Ensuring smooth code management and collaboration using Git and GitHub.
-                </p>
-              </div>
-
-            </li>
-
+    <section class="section container contact-section" id="contact" data-reveal>
+      <div class="section-head">
+        <p class="eyebrow">Contact</p>
+        <h2>Let us build something impactful</h2>
+      </div>
+      <div class="contact-grid">
+        <article class="glass-card">
+          <h3>Reach me directly</h3>
+          <ul class="contact-list">
+            <li><ion-icon name="mail-outline"></ion-icon><a href="mailto:imamhsn195@gmail.com">imamhsn195@gmail.com</a></li>
+            <li><ion-icon name="call-outline"></ion-icon><a href="tel:+971528575908">+971 528575908</a></li>
+            <li><ion-icon name="location-outline"></ion-icon><span>Dubai, United Arab Emirates</span></li>
+            <li><ion-icon name="calendar-outline"></ion-icon><span>Born: January 20, 1994</span></li>
           </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/client_zone.jpg" alt="Elite Zone Delivery Services" width="60" data-testimonials-avatar style="border-radius: 20px 20px;">
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Elite Zone Delivery Services</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    We have no hesitation in recommending Imam as a Web Application Developer. His dedication, technical expertise, and team-oriented mindset make him a valuable asset to any organization, and We consider ourselves fortunate to have had the opportunity to work with him.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-            
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/client_af.jpg" alt="Asia Fashion" width="60" data-testimonials-avatar style="border-radius: 20px 20px;">
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Asia Fashion</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Imam Hasan was hired to create a corporate identity. We were very pleased with the work done. He has a
-                    lot of experience
-                    and is very concerned about the needs of client.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/client_rs.jpg" alt="Ringer Soft Ltd." width="60" data-testimonials-avatar style="border-radius: 20px 20px;">
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Ringer Soft Ltd.</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Imam Hasan was hired to create a corporate identity. We were very pleased with the work done. He has a
-                    lot of experience
-                    and is very concerned about the needs of client.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <!-- <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Imam Hasan was hired to create a corporate identity. We were very pleased with the work done. He has a
-                    lot of experience
-                    and is very concerned about the needs of client.
-                  </p>
-                </div>
-
-              </div>
-            </li> -->
-
+        </article>
+        <article class="glass-card contact-cta">
+          <h3>Available for</h3>
+          <ul>
+            <li>Backend engineering roles</li>
+            <li>API architecture and integrations</li>
+            <li>ERP platform development</li>
+            <li>Consulting on workflow automation</li>
           </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img style="border-radius: 20px 20px;">
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-
-
-        <!--
-          - clients
-        -->
-
-        <section class="clients">
-
-          <h3 class="h3 clients-title">Languages & Frameworks</h3>
-
-          <ul class="clients-list has-scrollbar">
-            <li class="clients-item">
-              <a href="https://spring.io/projects/spring-boot" target="_blank">
-                <img src="./assets/images/web_tool_spring_boot.png" alt="Web Tool Spring Boot">
-              </a>
-            </li>
-            
-            <li class="clients-item">
-              <a href="https://www.java.com/en/" target="_blank">
-                <img src="./assets/images/web_tool_java.png" alt="JAVA">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://laravel.com/" target="_blank">
-                <img src="./assets/images/web_tool_laravel.png" alt="Laravel">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://www.php.net/" target="_blank">
-                <img src="./assets/images/web_tool_php.png" alt="PHP">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://nodejs.org/en/" target="_blank">
-                <img src="./assets/images/web_tool_nodejs.png" alt="Node">
-              </a>
-            </li>
-            
-            <li class="clients-item">
-              <a href="https://spring.io/projects/spring-boot" target="_blank">
-                <img src="./assets/images/web_tool_angular.png" alt="Web Tool Spring Boot">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://reactjs.org/" target="_blank">
-                <img src="./assets/images/web_tool_react.png" alt="React">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://flutter.dev/" target="_blank">
-                <img src="./assets/images/web_tool_flutter.png" alt="Flutter">
-              </a>
-            </li>
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume 
-            <button 
-              data-component="IconButton" 
-              type="button" 
-              aria-label="Download raw content" 
-              data-testid="download-raw-button" 
-              data-loading="false" 
-              data-no-visuals="true" 
-              data-size="small" 
-              data-variant="default" 
-              aria-describedby=":Rtcsptal9lab:-loading-announcement" 
-              data-hotkey="Control+Shift+S"
-              onclick="downloadResume()"
-              style="color: white; padding: 10px 20px; border-radius: 4px; font-size: 14px; cursor: pointer; display: inline-block; align-items: center; justify-content: center; transition: background-color 0.3s ease, border-color 0.3s ease;">
-              <svg aria-hidden="true" focusable="false" class="octicon octicon-download" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible; margin-right: 8px;">
-                <path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"></path>
-                <path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"></path>
-              </svg>
-            </button>
-          </h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Software Engineer (Spring Boot & Laravel) at Zone Delivery Services · Full-time</h4>
-
-              <span>(Jan 2021 - Present · 4 yrs)</span>
-
-              <p class="timeline-text" style="color: #d6d6d6;">
-                <p style="font-weight: bold; color: #d6d6d6;">Duties & Responsibilities:</p>
-                <ul style="margin-left: 20px; padding-left: 0; list-style-type: none; color: #d6d6d6;">
-                    <li>- Developing and maintaining ERP web services using Java Spring Boot.</li>
-                    <li>- Managing and enhancing modules such as Company License, Vehicle License, Passports, Visa Processing, Advertisement Permits, Driving License, Emirates ID, Labor Card, Telecommunication, E-establishment Card, and Traffic Code.</li>
-                    <li>- Utilizing tools like Git, GitHub, Jira, and Postman for efficient development and collaboration.</li>
-                    <li>- Designing and documenting APIs using Swagger for seamless integration and communication.</li>
-                    <li>- Conducting database management and optimization with MySQL Workbench.</li>
-                    <li>- Leveraging AI tools like ChatGPT to enhance productivity and streamline workflows.</li>
-                </ul>
-            
-                <h5 style="color: #d6d6d6;">Zone Delivery Services · Full-time (Laravel)</h5>
-                <p style="font-weight: bold; color: #d6d6d6;">Duties & Responsibilities:</p>
-                <ul style="margin-left: 20px; padding-left: 0; list-style-type: none; color: #d6d6d6;">
-                    <li>- Developing and maintaining ERP application modules using Laravel.</li>
-                    <li>- Implementing and managing modules like RTA, COD Collection, and others to streamline business processes.</li>
-                    <li>- Collaborating with the team using Git, GitHub, and Jira for version control and task tracking.</li>
-                    <li>- Testing and debugging APIs with Postman to ensure seamless functionality.</li>
-                    <li>- Managing databases using MySQL Workbench and integrating APIs with Swagger documentation.</li>
-                    <li>- Incorporating ChatGPT to optimize problem-solving and enhance code quality.</li>
-                </ul>
-                <b style="color: white;">SKILLS: </b><span style="color: white; font-weight: bold; font-style: italic;">Spring Boot, Laravel, MySQL, Git, Jira, Postman, Swagger API, Workbench, ChatGPT</span>
-            </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Software Engineer (Laravel) at Ringer Soft · Full-time</h4>
-
-              <span>(Oct 2019 - Jan 2021 · 1 yr 4 mos)</span>
-
-              <p class="timeline-text" style="color: #d6d6d6;">
-                <p style="font-weight: bold; color: #d6d6d6;">Duties & Responsibilities:</p>
-                <ul style="margin-left: 20px; padding-left: 0; list-style-type: none; color: #d6d6d6;">
-                    <li>- Managing and enhancing ERP modules with Laravel and MySQL.</li>
-                    <li>- Developing new features and ensuring seamless integration across modules.</li>
-                    <li>- Providing client support to address and resolve issues promptly.</li>
-                    <li>- Refactoring and optimizing code structures using modern technologies.</li>
-                    <li>- Collaborating effectively with the team using Git, GitLab, and Slack for version control and communication.</li>
-                    <li>- Leveraging skills in Laravel, Spring Boot, Flutter, and MySQL to deliver scalable and user-friendly ERP solutions.</li>
-                </ul>
-                <b style="color: white;">SKILLS: </b><span style="color: white; font-weight: bold; font-style: italic;">Laravel, MySQL, Git, GitLab, Slack</span>
-            </p>
-            
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Junior Software Engineer (laravel) at CGIT · Full-time</h4>
-
-              <span>(Nov 2018 - Sep 2019 · 11 mos)</span>
-
-              <p class="timeline-text" style="color: #d6d6d6;">
-                <p style="font-weight: bold; color: #d6d6d6;">Duties & Responsibilities:</p>
-                <ul style="margin-left: 20px; padding-left: 0; list-style-type: none; color: #d6d6d6;">
-                    <li>- Planning and managing web application development projects.</li>
-                    <li>- Designing and developing databases using MySQL.</li>
-                    <li>- Building and maintaining web applications with Laravel.</li>
-                    <li>- Implementing interactive features using jQuery and responsive designs with Bootstrap.</li>
-                    <li>- Managing version control with Git and Bitbucket.</li>
-                    <li>- Collaborating and tracking tasks using tools like Trello and Slack.</li>
-                </ul>
-                <b style="color: white;">SKILLS: </b><span style="color: white; font-weight: bold; font-style: italic;">Laravel, Bootstrap, jQuery, MySQL, Git, Trello, Slack</span>
-            </p>
-            
-            </li>
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Web Designer & Developer at Corporate Solution · Full-time</h4>
-
-              <span>(Apr 2017 - Oct 2017 · 7 mos)</span>
-
-              <p class="timeline-text" style="color: #d6d6d6;">
-                <h5 style="color: #d6d6d6;">Wordpress Website Developer</h5>
-                <p style="font-weight: bold; color: #d6d6d6;">Duties & Responsibilities:</p>
-                <ul style="margin-left: 20px; padding-left: 0; list-style-type: none; color: #d6d6d6;">
-                    <li>- Web Design and Development: Creating responsive, user-friendly websites with modern tools.</li>
-                    <li>- SEO: Optimizing website content and structure for improved search engine rankings.</li>
-                    <li>- CMS: Customizing and managing WordPress websites with themes and plugins.</li>
-                    <li>- Adobe Illustrator & Photoshop: Designing graphics, logos, and promotional materials.</li>
-                    <li>- Bootstrap: Building responsive designs for consistent layouts across devices.</li>
-                    <li>- WordPress & MySQL: Developing and maintaining WordPress sites and managing databases.</li>
-                </ul>
-                <b style="color: white;">SKILLS: </b><span style="color: white; font-weight: bold; font-style: italic;">Web Design, Bootstrap, Search Engine Optimization (SEO), Adobe Illustrator, Photoshop, WordPress, MySQL</span>
-            </p>
-            
-            </li>
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Professional Trainings</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Spring Boot Unit Testing with JUnit, Mockito and MockMvc</h4>
-
-              <span>2023</span>
-
-              <p class="timeline-text">
-                successfully completed the course Spring Boot Unit Testing with JUnit, Mockito and MockMvc on 03/24/2023 as taught by Chad Darby, Eric Roby on Udemy
-                <small><i>Spring Boot JUnit, Mockito and MockMvc</i></small>.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">IsDB-BISEW IT Scholarship</h4>
-
-              <span>2018 — 2019</span>
-
-              <p class="timeline-text">
-                Successfully completed 1040 hours IsDB-BISEW Diploma in Web Application Development with PHP Frameworks.
-                <small><i>HTML5, CSS3, javaScript, Photoshop Web Addition, PHP Core, AJAX, XML, WordPress, Magento, AngularJS, ReactJS, Laravel, CodeIgniter</i></small>.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Computer Fundamental ( Prerequisite course of IsDB-BISEW IT Scholarship )</h4>
-
-              <span>2018</span>
-
-              <p class="timeline-text">
-                Successfully completed 140 hours Computer Fundamental Prerequisite course of IsDB-BISEW IT Scholarship in
-                <small><i>Basic Programming Concepts, Microsoft Office 2010 (Word, Excel, Access, Power Point, Outlook)</i></small>.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">New Horizons Internet Professional Program</h4>
-
-              <span>2017</span>
-
-              <p class="timeline-text">
-                Successfully completed 190 hours New Horizons Internet Professional Program in 
-                <small><i>HTML, CSS, Adobe Photoshop, Adove Flash, JavaScript, AJAX PHP, MySql</i></small>.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Office Management</h4>
-
-              <span>2010</span>
-
-              <p class="timeline-text">
-                Successfully completed 140 hours Office Management Training Course using  
-                <small><i>Computer Basics, Microsoft Office, Internet Browsing</i></small>.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">International Islamic University Chittagong</h4>
-
-              <span>2017 — 2018</span>
-
-              <p class="timeline-text">
-                M.B.A. Major in Finance & Banking
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">International Islamic University Chittagong</h4>
-
-              <span>2014 — 2017</span>
-
-              <p class="timeline-text">
-                B.B.A Major in Finance & Banking
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Govt. City College</h4>
-
-              <span>2010 — 2011</span>
-
-              <p class="timeline-text">
-                Higher Secondary School Certificae
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Sanowara Islam Boys' High School</h4>
-
-              <span>2009 — 2010</span>
-
-              <p class="timeline-text">
-                Secondary School Certificae
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-        
-          <ul class="skills-list content-card">
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Spring Boot</h5>
-                <data value="70">70%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Laravel</h5>
-                <data value="80">80%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">MySQL</h5>
-                <data value="60">60%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Git</h5>
-                <data value="85">85%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 85%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Jira</h5>
-                <data value="75">75%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 75%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Postman</h5>
-                <data value="65">65%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 65%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Swagger API</h5>
-                <data value="55">55%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 55%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Workbench</h5>
-                <data value="70">70%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">ChatGPT</h5>
-                <data value="90">90%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Gitlab</h5>
-                <data value="80">80%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Slack</h5>
-                <data value="70">70%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Bootstrap</h5>
-                <data value="60">60%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">jQuery</h5>
-                <data value="50">50%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Trello</h5>
-                <data value="65">65%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 65%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Web Design</h5>
-                <data value="75">75%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 75%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">SEO</h5>
-                <data value="65">65%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 65%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Adobe Illustrator</h5>
-                <data value="50">50%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Photoshop</h5>
-                <data value="60">60%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="70">70%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-            </li>
-        
-          </ul>
-        
-        </section>
-        
-
-        <section class="clients">
-
-          <h3 class="h3 clients-title">Dev Tools</h3>
-          <br>
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/tools_ps.png" class="dev_tools_img" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/tools_ai.png" class="dev_tools_img"  alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/tools_vs_code.png" class="dev_tools_img"  alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/tools_jira_board.png"  class="dev_tools_img"  alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/tools_composer.png"  class="dev_tools_img"  alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/tools_git.png"  class="dev_tools_img"  alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-     <!-- <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Finance</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="https://github.com/imamhsn195/breakfast" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/brakefast.png" alt="Brakefast" loading="lazy">
-                </figure>
-              </a>
-                <h3 class="project-title">Brakefast</h3>
-                <p class="project-category">Flutter App Design</p>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article> -->
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-<!-- 
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article> -->
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115588.11853487867!2d55.15240115618249!3d25.131339239954173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6bdaffffff91%3A0xe5b4bac8cd6dc957!2sZone%20Delivery%20Services!5e0!3m2!1sen!2sae!4v1678773228010!5m2!1sen!2sae"
-              width="400" height="500" loading="lazy"></iframe>
-          </figure>
-
-        </section>
-
-        <section class="contact-form">
-          <div style="display: flex; justify-content: space-between; gap: 5px; color: #d6d6d6;">
-            <div style="flex: 1;">
-              <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="display: flex; align-items: center; margin-bottom: 15px;">
-                  <div style="margin-right: 10px;">
-                    <ion-icon name="mail-outline" role="img" class="md hydrated" aria-label="mail outline" style="color: #ffdb70;"></ion-icon>
-                  </div>
-                  <div style="display: flex; flex-direction: column;">
-                    <p style="font-weight: bold; color: #d6d6d6;">Email</p>
-                    <a href="mailto:imamhsn195@gmail.com" style="text-decoration: none; color: #d6d6d6;">imamhsn195@gmail.com</a>
-                  </div>
-                </li>
-                <li style="display: flex; align-items: center; margin-bottom: 15px;">
-                  <div style="margin-right: 10px;">
-                    <ion-icon name="phone-portrait-outline" role="img" class="md hydrated" aria-label="phone portrait outline" style="color: #ffdb70;"></ion-icon>
-                  </div>
-                  <div style="display: flex; flex-direction: column;">
-                    <p style="font-weight: bold; color: #d6d6d6;">Phone</p>
-                    <a href="tel:+971 528575908" style="text-decoration: none; color: #d6d6d6;">+971 528575908</a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div style="flex: 1;">
-              <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="display: flex; align-items: center; margin-bottom: 15px;">
-                  <div style="margin-right: 10px;">
-                    <ion-icon name="calendar-outline" role="img" class="md hydrated" aria-label="calendar outline" style="color: #ffdb70;"></ion-icon>
-                  </div>
-                  <div style="display: flex; flex-direction: column;">
-                    <p style="font-weight: bold; color: #d6d6d6;">Birthday</p>
-                    <time datetime="1994-01-20" style="color: #d6d6d6;">January 20, 1994</time>
-                  </div>
-                </li>
-                <li style="display: flex; align-items: center; margin-bottom: 15px;">
-                  <div style="margin-right: 10px;">
-                    <ion-icon name="location-outline" role="img" class="md hydrated" aria-label="location outline" style="color: #ffdb70;"></ion-icon>
-                  </div>
-                  <div style="display: flex; flex-direction: column;">
-                    <p style="font-weight: bold; color: #d6d6d6;">Address</p>
-                    <address style="color: #d6d6d6;">
-                      <a href="https://goo.gl/maps/qGRPHGjtvpyLdoVV8" style="white-space: normal; text-decoration: none; color: #d6d6d6;">Dubai, UAE</a>
-                    </address>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-          <!-- <h3 class="h3 form-title">Contact Form</h3>
-          <h6 class="h6 form-title" id="success-message" style="display: none;">Email sent successfully!</h6>
-          <form method="POST" action="https://script.google.com/macros/s/AKfycbxoXQp_pMutt1LN5ulS4kWVAGwVWgm1AgmWc-3EV3aOh5CfThOYn188j9_aXpLL9_kzRg/exec" class="form" id="my-form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form> -->
-
-        </section>
-
-      </article>
-
-    </div>
-
+          <a href="mailto:imamhsn195@gmail.com?subject=Project%20Discussion%20with%20Imam%20Hasan" class="btn btn-primary">Start a conversation</a>
+        </article>
+      </div>
+    </section>
   </main>
 
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> Imam Hasan. Crafted for modern web standards.</p>
+      <a href="./Latest%20Resume.pdf" download>Resume</a>
+    </div>
+  </footer>
 
-
-
-
-
-  <!--
-    - custom js link
-  -->
   <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-  <script>
-      window.addEventListener("load", function() {
-      const form = document.getElementById('my-form');
-      form.addEventListener("submit", function(e) {
-        e.preventDefault();
-        const data = new FormData(form);
-        const action = e.target.action;
-        fetch(action, {
-          method: 'POST',
-          body: data,
-        })
-        .then(() => {
-          document.getElementById('success-message').style.display = "block";
-          form.reset();
-          setTimeout(function(){
-            document.getElementById('success-message').style.display = "none";
-          }, 1000)
-        })
-      });
-    });
-  </script>
-<script>
-  function downloadResume() {
-    const url = 'Latest%20Resume.pdf';
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'Latest Resume.docx'; // You can set the name of the file if desired
-    link.click();
-  }
-</script>
 </body>
-
 </html>
