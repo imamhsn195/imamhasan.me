@@ -12,20 +12,26 @@
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* -------- Theme toggle (dark / light) -------- */
+  /* -------- Theme follows system preference -------- */
   const root = document.documentElement;
-  const themeToggle = document.getElementById('themeToggle');
+  const systemTheme = window.matchMedia('(prefers-color-scheme: light)');
   const setTheme = (theme) => {
     root.setAttribute('data-theme', theme);
-    try { localStorage.setItem('theme', theme); } catch (e) {}
     const meta = document.querySelector('meta[name="theme-color"]');
     if (meta) meta.setAttribute('content', theme === 'light' ? '#f5f7fa' : '#0a0a0a');
   };
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const current = root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-      setTheme(current === 'light' ? 'dark' : 'light');
-    });
+
+  try { localStorage.removeItem('theme'); } catch (e) {}
+  setTheme(systemTheme.matches ? 'light' : 'dark');
+
+  const onSystemThemeChange = (event) => {
+    setTheme(event.matches ? 'light' : 'dark');
+  };
+
+  if (typeof systemTheme.addEventListener === 'function') {
+    systemTheme.addEventListener('change', onSystemThemeChange);
+  } else if (typeof systemTheme.addListener === 'function') {
+    systemTheme.addListener(onSystemThemeChange);
   }
 
   /* -------- Sticky nav scroll state -------- */
