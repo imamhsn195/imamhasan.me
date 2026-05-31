@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imam Hasan — CV · Software Engineer</title>
+  <meta name="description" content="Curriculum Vitae of Imam Hasan, Software Engineer specialising in Laravel and Spring Boot — production e-commerce, warehouse fulfilment, and payment systems in Dubai." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://imamhasan.me/cv.html" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icon-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --accent: #2f6fe0;
+      --ink: #15202b;
+      --ink-dim: #44505f;
+      --ink-faint: #6b7787;
+      --line: #e2e7ee;
+      --bg: #ffffff;
+      --tag-bg: #eef3fb;
+      --gold: #8a6309;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--ink);
+      background: #eef1f5;
+      line-height: 1.5;
+      font-size: 13.5px;
+      padding: 32px 16px 64px;
+    }
+
+    .toolbar {
+      max-width: 820px;
+      margin: 0 auto 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .toolbar p { color: #5b6675; font-size: 13px; }
+    .toolbar-actions { display: flex; gap: 10px; }
+    .btn {
+      font: inherit;
+      font-weight: 600;
+      font-size: 13px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      padding: 9px 16px;
+      border-radius: 9px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: border-color .2s, transform .1s;
+    }
+    .btn:hover { border-color: var(--accent); }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    .page {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--bg);
+      padding: 48px 52px;
+      border-radius: 4px;
+      box-shadow: 0 10px 40px rgba(15, 23, 42, 0.12);
+    }
+
+    /* Header */
+    .cv-head { border-bottom: 2px solid var(--ink); padding-bottom: 18px; margin-bottom: 22px; }
+    .cv-name { font-size: 30px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+    .cv-role {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12.5px;
+      color: var(--accent);
+      font-weight: 500;
+      margin-top: 6px;
+      letter-spacing: 0.02em;
+    }
+    .cv-contacts {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      font-size: 12.5px;
+      color: var(--ink-dim);
+    }
+    .cv-contacts a { color: var(--ink-dim); text-decoration: none; }
+    .cv-contacts a:hover { color: var(--accent); text-decoration: underline; }
+    .cv-contacts span { display: inline-flex; align-items: center; gap: 6px; }
+    .cv-contacts .dot { color: var(--line); }
+
+    /* Sections */
+    section { margin-bottom: 20px; }
+    .sec-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--line);
+    }
+    .summary { color: var(--ink-dim); font-size: 13.5px; }
+
+    /* Experience */
+    .job { margin-bottom: 16px; }
+    .job:last-child { margin-bottom: 0; }
+    .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+    .job-title { font-size: 15px; font-weight: 700; }
+    .job-org { font-size: 13px; color: var(--accent); font-weight: 600; }
+    .job-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--ink-faint);
+      white-space: nowrap;
+    }
+    .job-loc { font-size: 11.5px; color: var(--ink-faint); }
+    .job ul { margin: 8px 0 0; padding-left: 18px; }
+    .job li { margin-bottom: 4px; color: var(--ink-dim); }
+
+    /* Skills grid */
+    .skills { display: grid; grid-template-columns: 140px 1fr; gap: 6px 16px; }
+    .skills dt { font-weight: 700; font-size: 12.5px; }
+    .skills dd { color: var(--ink-dim); font-size: 12.5px; }
+
+    /* Tag chips */
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip {
+      background: var(--tag-bg);
+      color: var(--accent);
+      border-radius: 5px;
+      padding: 3px 9px;
+      font-size: 11.5px;
+      font-weight: 600;
+    }
+
+    /* Projects */
+    .proj { margin-bottom: 11px; }
+    .proj:last-child { margin-bottom: 0; }
+    .proj-name { font-weight: 700; font-size: 13px; }
+    .proj-name .gold { color: var(--gold); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-left: 6px; }
+    .proj p { color: var(--ink-dim); font-size: 12.5px; margin-top: 1px; }
+    .proj a { color: var(--ink-faint); text-decoration: none; font-size: 11.5px; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 28px; }
+
+    .oss-line { font-size: 12.5px; color: var(--ink-dim); margin-bottom: 3px; }
+    .oss-line strong { color: var(--ink); }
+
+    @media print {
+      @page { size: A4; margin: 12mm 14mm; }
+      body { background: #fff; padding: 0; font-size: 11px; }
+      .toolbar { display: none !important; }
+      .page { box-shadow: none; max-width: none; margin: 0; padding: 0; border-radius: 0; }
+      .cv-name { font-size: 25px; }
+      section { margin-bottom: 14px; }
+      .job { margin-bottom: 12px; page-break-inside: avoid; }
+      .proj { page-break-inside: avoid; }
+      a { color: var(--ink-dim) !important; }
+    }
+
+    @media (max-width: 640px) {
+      .page { padding: 32px 22px; }
+      .skills { grid-template-columns: 1fr; gap: 2px; }
+      .skills dt { margin-top: 8px; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <p>Tip: click <strong>Download PDF</strong>, then choose “Save as PDF” as the destination.</p>
+    <div class="toolbar-actions">
+      <a class="btn" href="index.html">← Back to site</a>
+      <button class="btn btn-primary" onclick="window.print()">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg>
+        Download PDF
+      </button>
+    </div>
+  </div>
+
+  <main class="page">
+    <header class="cv-head">
+      <h1 class="cv-name">Imam Hasan</h1>
+      <div class="cv-role">Software Engineer · Laravel · Spring Boot</div>
+      <div class="cv-contacts">
+        <span>Dubai, UAE</span>
+        <span class="dot">·</span>
+        <span><a href="mailto:imamhsn195@gmail.com">imamhsn195@gmail.com</a></span>
+        <span class="dot">·</span>
+        <span><a href="tel:+971528575908">+971 52 857 5908</a></span>
+        <span class="dot">·</span>
+        <span><a href="tel:+8801742318891">+880 1742 318891</a></span>
+        <span class="dot">·</span>
+        <span><a href="https://imamhasan.me">imamhasan.me</a></span>
+        <span class="dot">·</span>
+        <span><a href="https://github.com/imamhsn195">github.com/imamhsn195</a></span>
+        <span class="dot">·</span>
+        <span><a href="https://www.linkedin.com/in/imamhsn195">linkedin.com/in/imamhsn195</a></span>
+      </div>
+    </header>
+
+    <section>
+      <h2 class="sec-title">Summary</h2>
+      <p class="summary">
+        Backend-leaning software engineer shipping production software since 2018, with a deep focus on
+        Laravel and Spring Boot for high-throughput JVM work. Currently lead engineering on the Nolo platform
+        out of Dubai — a 13-store retail e-commerce portfolio, a multi-tenant warehouse fulfilment hub, and an
+        iOS POS API. Specialised in payment integrations, conversion tracking, warehouse systems, auth hardening,
+        and audit-grade order workflows — the kind of services that must be right because money moves through them.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="sec-title">Experience</h2>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <span class="job-title">Software Engineer</span> —
+            <span class="job-org">X Hub Technologies LLC · Nolo platform</span>
+            <div class="job-loc">Dubai, UAE</div>
+          </div>
+          <span class="job-date">2025 — Present</span>
+        </div>
+        <ul>
+          <li>Engineer across a 13-store retail e-commerce portfolio, a warehouse fulfilment hub, and an iOS POS API.</li>
+          <li>Built and maintained payment integrations across N-Genius, Tamara, Tabby, Stripe, PayPal, and Ziina, plus token-protected custom-order payment links.</li>
+          <li>Authored the canonical TOTP 2FA, OTP-hardening, and VAPID web-push patterns now reused across the portfolio.</li>
+          <li>Designed bin-level inventory, reservations, multi-client baskets, and an OrderWorkflow state machine for the warehouse hub.</li>
+          <li>Wired server-side conversion tracking (Meta CAPI, TikTok Events, Stape sGTM) with idempotency, dedup, and proxy modes.</li>
+          <li>Shipped a Sanctum-secured mobile API for the Nolo iOS POS app — auth, orders, custom orders, dashboard, devices, and HMAC-signed metrics.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <span class="job-title">Software Engineer</span> —
+            <span class="job-org">Elite Zone Delivery Services</span>
+            <div class="job-loc">Dubai, UAE</div>
+          </div>
+          <span class="job-date">— 2025</span>
+        </div>
+        <ul>
+          <li>Laravel-first delivery on customer and operations platforms — Eloquent, Blade, queues, scheduled jobs.</li>
+          <li>API and integration work supporting delivery, fulfilment, and customer-facing flows.</li>
+          <li>Carried the same designation forward into X Hub Technologies in 2025.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <span class="job-title">Full-Stack &amp; API Engineering</span> —
+            <span class="job-org">Earlier roles &amp; freelance</span>
+            <div class="job-loc">Remote · Bangladesh · UAE</div>
+          </div>
+          <span class="job-date">Since 2018</span>
+        </div>
+        <ul>
+          <li>Laravel-first delivery for SaaS, e-commerce, and internal tooling — Eloquent, Blade, queues, jobs, scheduled tasks.</li>
+          <li>Spring Boot services: REST APIs, JPA / Hibernate, Spring Security, AOP, automated testing with JUnit, Mockito, and MockMvc.</li>
+          <li>Front-end work in Vue, Angular, and React; Next.js auth front-ends paired with Laravel Breeze backends.</li>
+          <li>Open-source side projects: Laravel packages, a full-stack mess-management trio (Laravel + Express + Angular), and WordPress theme work.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="sec-title">Technical Skills</h2>
+      <dl class="skills">
+        <dt>Backend</dt>
+        <dd>Laravel 10/11, PHP 8.x, Spring Boot, Java 17, Node.js / Express, Yii</dd>
+        <dt>Frontend</dt>
+        <dd>Blade, Vite, Tailwind CSS, Bootstrap, Vue.js, React / Next.js, Angular, TypeScript</dd>
+        <dt>Database</dt>
+        <dd>MySQL, MariaDB, Eloquent ORM, Redis (caching), JPA / Hibernate</dd>
+        <dt>Mobile / API</dt>
+        <dd>Laravel Sanctum, REST APIs, APNs, FCM, HMAC-signed endpoints</dd>
+        <dt>Payments</dt>
+        <dd>N-Genius, Tamara, Tabby, Stripe, PayPal, Ziina</dd>
+        <dt>Tracking</dt>
+        <dd>Meta CAPI, TikTok Events, Stape server-side GTM</dd>
+        <dt>Integrations</dt>
+        <dd>Odoo (XML-RPC), Twilio, Quiqup, SMSA, Halan, Topex, GetGive, Meshy AI</dd>
+        <dt>Auth &amp; Security</dt>
+        <dd>TOTP 2FA, OTP hardening (CSPRNG, hash_equals, RateLimiter), Spatie RBAC, VAPID web push, Cloudflare Turnstile</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2 class="sec-title">Selected Projects — Nolo Commerce Portfolio</h2>
+      <div class="proj">
+        <div class="proj-name">Chub Warehouse <span class="gold">Gold standard</span></div>
+        <p>Group fulfilment hub: bin-level inventory truth, reservations, multi-client baskets, OrderWorkflow state machine, VAPID web push, TOTP 2FA, public REST API, and client billing. <a href="https://chub.ae/">chub.ae</a></p>
+      </div>
+      <div class="proj">
+        <div class="proj-name">Odor Perfumes <span class="gold">Gold standard</span></div>
+        <p>Tamara BNPL gold-standard implementation (HS256 JWT, idempotent webhooks, capture/refund), multi-branch POS with cash sessions, and plan-tier feature flags. <a href="https://odor.ae/">odor.ae</a></p>
+      </div>
+      <div class="proj">
+        <div class="proj-name">Proboxs <span class="gold">Gold standard</span></div>
+        <p>Unified Meta + TikTok + Stape conversion tracking with shared event-ID dedup, iOS POS companion, extra-payment requests, and X-Terms agreement gate. <a href="https://www.proboxs.com/">proboxs.com</a></p>
+      </div>
+      <div class="proj">
+        <div class="proj-name">+ 10 more production stores</div>
+        <p>Antiqa, Ojo, Ducks, Raheeq, Bonoss, Capio Caps, Greenhand, Voguecult, Swords, Trtba — multi-brand UAE/GCC commerce with Odoo sync, multi-language EN/AR, and per-store payment, courier, and tracking integrations.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="sec-title">Open Source — github.com/imamhsn195 (72 public repos)</h2>
+      <div class="two-col">
+        <p class="oss-line"><strong>laravel-system-logs</strong> — log viewer/manager package (PHP)</p>
+        <p class="oss-line"><strong>laravel-Interactive-map</strong> — Leaflet.js maps (Blade/PHP)</p>
+        <p class="oss-line"><strong>laravel-theme-manager</strong> — storefront theme manager (PHP)</p>
+        <p class="oss-line"><strong>breeze-next</strong> — Next.js auth kit for Laravel Breeze</p>
+        <p class="oss-line"><strong>messbook</strong> — Laravel + Express + Angular trio</p>
+        <p class="oss-line"><strong>Spring-Framework-Basics / SpringAOP</strong> — Java/Spring labs</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
