@@ -28,6 +28,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
+  <!-- Set theme before paint to avoid flash -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var theme = stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0a0a'/%3E%3Ctext x='50' y='66' font-family='Inter,sans-serif' font-size='52' font-weight='800' fill='%234f8cff' text-anchor='middle'%3EIH%3C/text%3E%3C/svg%3E" />
 </head>
@@ -58,13 +71,19 @@
         <a href="#oss">Open Source</a>
         <a href="#experience">Experience</a>
       </nav>
-      <a href="#contact" class="nav-cta">
-        <span>Get in touch</span>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </a>
-      <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="#contact" class="nav-cta">
+          <span>Get in touch</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -82,8 +101,9 @@
           <span>commerce platforms.</span>
         </h1>
         <p class="hero-sub reveal">
-          5+ years on Laravel, 2+ on Spring Boot. Currently shipping a 13-store e-commerce
-          portfolio + warehouse fulfilment hub + iOS POS API for the Nolo platform out of Dubai.
+          Shipping production software since 2018 — deep in Laravel, with Spring Boot for
+          high-throughput JVM work. Currently building a 13-store e-commerce portfolio, a warehouse
+          fulfilment hub, and an iOS POS API for the Nolo platform out of Dubai.
         </p>
         <div class="hero-meta reveal">
           <div class="hero-meta-item">
@@ -109,13 +129,13 @@
           </a>
         </div>
         <div class="hero-proof reveal" aria-label="Professional highlights">
-          <span>5+ years shipping Laravel systems</span>
+          <span>Shipping Laravel since 2018</span>
           <span>13-store commerce portfolio</span>
           <span>72 public repositories</span>
         </div>
       </div>
       <div class="hero-media reveal">
-        <img src="assets/images/imamhasan/imam_hasan.png" alt="Imam Hasan portrait" width="540" height="640" loading="eager" decoding="async" />
+        <img src="assets/images/imamhasan/imam_hasan_gitex.png" alt="Imam Hasan at GITEX, Dubai" width="540" height="720" loading="eager" decoding="async" />
       </div>
     </div>
     <div class="hero-scroll" aria-hidden="true">
@@ -129,9 +149,9 @@
     <div class="container">
       <div class="stats-grid">
         <div class="stat reveal">
-          <div class="stat-num" data-target="5">0</div>
-          <div class="stat-suffix">+ years</div>
-          <div class="stat-label">Laravel in production</div>
+          <div class="stat-num" data-target="2018">0</div>
+          <div class="stat-suffix">&nbsp;</div>
+          <div class="stat-label">shipping Laravel since</div>
         </div>
         <div class="stat reveal">
           <div class="stat-num" data-target="13">0</div>
@@ -144,9 +164,9 @@
           <div class="stat-label">public projects on GitHub</div>
         </div>
         <div class="stat reveal">
-          <div class="stat-num" data-target="2">0</div>
-          <div class="stat-suffix">+ years</div>
-          <div class="stat-label">Spring Boot &amp; Java</div>
+          <div class="stat-num" data-target="5">0</div>
+          <div class="stat-suffix">+ gateways</div>
+          <div class="stat-label">payment integrations shipped</div>
         </div>
       </div>
     </div>
@@ -162,8 +182,8 @@
       <div class="about-grid">
         <div class="about-text reveal">
           <p>
-            I'm Imam Hasan — a software engineer based in Dubai with a 5-year focus on Laravel and
-            a 2-year stint with Spring Boot for high-throughput JVM systems. Currently at
+            I'm Imam Hasan — a software engineer based in Dubai, building production systems since
+            2018 with a deep focus on Laravel and Spring Boot for high-throughput JVM work. Currently at
             <strong>X Hub Technologies LLC</strong>, leading engineering on the Nolo platform:
             a 13-store retail e-commerce portfolio, a multi-tenant warehouse fulfilment hub, and the
             companion Nolo iOS POS app.
@@ -301,7 +321,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>VAPID</span><span>FCM</span><span>SMSA</span><span>TOTP</span>
             </div>
-            <a href="#" class="work-link" data-domain="chub_warehouse">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://chub.ae/" target="_blank" rel="noopener" class="work-link" data-domain="chub_warehouse">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -325,7 +345,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>Tamara</span><span>Tabby</span><span>Halan</span><span>Spatie</span>
             </div>
-            <a href="#" class="work-link" data-domain="odor-perfumes">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://odor.ae/" target="_blank" rel="noopener" class="work-link" data-domain="odor-perfumes">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -349,7 +369,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>TOTP</span><span>Meta CAPI</span><span>TikTok</span><span>APNs</span>
             </div>
-            <a href="#" class="work-link" data-domain="proboxs">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://www.proboxs.com/" target="_blank" rel="noopener" class="work-link" data-domain="proboxs">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -368,7 +388,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>Odoo</span><span>Pushok</span><span>Meta CAPI</span>
             </div>
-            <a href="#" class="work-link" data-domain="antiqa">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://antiqa.ae/" target="_blank" rel="noopener" class="work-link" data-domain="antiqa">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -387,7 +407,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>Tailwind</span><span>Stape</span><span>Odoo</span>
             </div>
-            <a href="#" class="work-link" data-domain="ojo">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://ojo.ae/" target="_blank" rel="noopener" class="work-link" data-domain="ojo">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -406,7 +426,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>Meta CAPI</span><span>Meshy AI</span><span>TOTP</span>
             </div>
-            <a href="#" class="work-link" data-domain="ducks">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://ducks.ae/" target="_blank" rel="noopener" class="work-link" data-domain="ducks">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -425,7 +445,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>Tailwind 4</span><span>Spatie</span><span>Tabby</span>
             </div>
-            <a href="#" class="work-link" data-domain="raheeq">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://raheeq.ae/" target="_blank" rel="noopener" class="work-link" data-domain="raheeq">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -444,7 +464,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>Tamara</span><span>GetGive</span><span>Quiqup</span>
             </div>
-            <a href="#" class="work-link" data-domain="bonoss">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://www.bonossuae.com/" target="_blank" rel="noopener" class="work-link" data-domain="bonoss">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -463,7 +483,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>Odoo</span><span>CHUB</span><span>Meta CAPI</span>
             </div>
-            <a href="#" class="work-link" data-domain="capio_caps">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://www.capio.ae/" target="_blank" rel="noopener" class="work-link" data-domain="capio_caps">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -482,7 +502,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>Stripe</span><span>Tabby</span><span>Tailwind 4</span>
             </div>
-            <a href="#" class="work-link" data-domain="greenhand">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://greenhand.ae/" target="_blank" rel="noopener" class="work-link" data-domain="greenhand">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -501,7 +521,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>Tamara SDK</span><span>X-Terms</span>
             </div>
-            <a href="#" class="work-link" data-domain="voguecult">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://voguecult.com/" target="_blank" rel="noopener" class="work-link" data-domain="voguecult">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -520,7 +540,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>Stape</span><span>Sanctum</span><span>CHUB</span>
             </div>
-            <a href="#" class="work-link" data-domain="swords">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://swords.ae/" target="_blank" rel="noopener" class="work-link" data-domain="swords">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -539,7 +559,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>Tailwind 4</span><span>Vite 7</span><span>Spatie</span>
             </div>
-            <a href="#" class="work-link" data-domain="trtba">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://trtba.com/" target="_blank" rel="noopener" class="work-link" data-domain="trtba">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 

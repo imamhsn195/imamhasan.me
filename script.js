@@ -12,6 +12,22 @@
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* -------- Theme toggle (dark / light) -------- */
+  const root = document.documentElement;
+  const themeToggle = document.getElementById('themeToggle');
+  const setTheme = (theme) => {
+    root.setAttribute('data-theme', theme);
+    try { localStorage.setItem('theme', theme); } catch (e) {}
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', theme === 'light' ? '#f5f7fa' : '#0a0a0a');
+  };
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+      setTheme(current === 'light' ? 'dark' : 'light');
+    });
+  }
+
   /* -------- Sticky nav scroll state -------- */
   const nav = document.getElementById('nav');
   const onScroll = () => {
@@ -173,7 +189,7 @@
           navAnchors.forEach(a => {
             const matches = a.getAttribute('href') === `#${id}`;
             a.style.color = matches ? 'var(--text)' : '';
-            a.style.background = matches ? 'rgba(255, 255, 255, 0.04)' : '';
+            a.style.background = matches ? 'var(--raise)' : '';
           });
         }
       });
