@@ -75,7 +75,7 @@
 
   --text: #0f172a;
   --text-dim: #475569;
-  --text-faint: #64748b;
+  --text-faint: #52607a;
   --title-from: #0b1220;
   --title-to: #475569;
 
@@ -84,7 +84,7 @@
   --accent-glow: rgba(37, 99, 235, 0.28);
   --accent-glow-soft: rgba(37, 99, 235, 0.14);
   --on-accent: #ffffff;
-  --gold: #b8860b;
+  --gold: #8a6309;
 
   --nav-bg: rgba(255, 255, 255, 0.82);
   --nav-bg-solid: rgba(255, 255, 255, 0.96);
@@ -526,6 +526,27 @@ code { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monos
 .about-list li:last-child { border-bottom: 0; padding-bottom: 0; }
 .about-list li:first-child { padding-top: 0; }
 
+.principles {
+  margin-top: 30px; padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+.principles-title {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  letter-spacing: 0.12em; color: var(--text-faint);
+  text-transform: uppercase; margin-bottom: 18px;
+}
+.principles-list { display: grid; gap: 14px; }
+.principles-list li {
+  position: relative; padding-left: 22px;
+  font-size: 15px; line-height: 1.6; color: var(--text-dim);
+}
+.principles-list li::before {
+  content: ""; position: absolute; left: 0; top: 9px;
+  width: 7px; height: 7px; border-radius: 2px;
+  background: var(--accent); transform: rotate(45deg);
+}
+.principles-list strong { color: var(--text); font-weight: 600; }
+
 /* ============ Stack ============ */
 .stack-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
@@ -635,6 +656,13 @@ code { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monos
 .work-card.featured .work-logo img {
   max-width: min(58%, 300px);
   max-height: 132px;
+}
+/* Bonoss is a monochrome black wordmark on transparency — flip to white on dark panels. */
+.work-logo img[src*="bonoss"] {
+  filter: invert(1) drop-shadow(0 8px 22px rgba(0, 0, 0, 0.45));
+}
+:root[data-theme="light"] .work-logo img[src*="bonoss"] {
+  filter: drop-shadow(0 6px 18px rgba(15, 23, 42, 0.18));
 }
 .work-card::after {
   content: ''; position: absolute; inset: 0;
@@ -863,6 +891,51 @@ code { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monos
 .contact-link-value {
   font-size: 14px; color: var(--text); font-weight: 500;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+.contact-form {
+  position: relative;
+  margin-top: 24px; padding-top: 28px;
+  border-top: 1px solid var(--line);
+  display: grid; gap: 16px;
+}
+.contact-honeypot { position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; }
+.contact-form-row {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
+}
+.contact-field { display: flex; flex-direction: column; gap: 8px; }
+.contact-field label {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em;
+}
+.contact-field input,
+.contact-field textarea {
+  width: 100%; font: inherit; font-size: 15px; color: var(--text);
+  background: var(--raise);
+  border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 13px 16px; resize: vertical;
+  transition: border-color 0.25s, background 0.25s, box-shadow 0.25s;
+}
+.contact-field input::placeholder,
+.contact-field textarea::placeholder { color: var(--text-faint); }
+.contact-field input:focus,
+.contact-field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: var(--bg-1);
+  box-shadow: 0 0 0 3px var(--accent-glow-soft);
+}
+.contact-form-actions {
+  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+}
+.contact-submit { border: 0; cursor: pointer; }
+.contact-submit[disabled] { opacity: 0.6; cursor: default; }
+.contact-form-status { font-size: 14px; color: var(--text-dim); margin: 0; }
+.contact-form-status.is-success { color: var(--accent-2); }
+.contact-form-status.is-error { color: #e5484d; }
+
+@media (max-width: 600px) {
+  .contact-form-row { grid-template-columns: 1fr; }
 }
 
 /* ============ Footer ============ */

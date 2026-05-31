@@ -245,4 +245,50 @@
     tryNext();
   });
 
+  /* -------- Contact form (Web3Forms) -------- */
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    const status = document.getElementById('contactStatus');
+    const submitBtn = contactForm.querySelector('.contact-submit');
+    const btnLabel = contactForm.querySelector('.contact-submit-label');
+    const setStatus = (msg, state) => {
+      if (!status) return;
+      status.textContent = msg;
+      status.classList.remove('is-success', 'is-error');
+      if (state) status.classList.add(state);
+    };
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      // Honeypot: bail silently if filled by a bot.
+      if (contactForm.querySelector('[name="botcheck"]')?.checked) return;
+
+      const originalLabel = btnLabel ? btnLabel.textContent : '';
+      if (submitBtn) submitBtn.disabled = true;
+      if (btnLabel) btnLabel.textContent = 'Sending…';
+      setStatus('Sending your message…');
+
+      try {
+        const data = Object.fromEntries(new FormData(contactForm).entries());
+        const res = await fetch(contactForm.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(data),
+        });
+        const json = await res.json();
+        if (res.ok && json.success) {
+          contactForm.reset();
+          setStatus('Thanks — your message is on its way. I\'ll reply soon.', 'is-success');
+        } else {
+          setStatus(json.message || 'Something went wrong. Please email me directly.', 'is-error');
+        }
+      } catch (err) {
+        setStatus('Network error. Please email me directly at imamhsn195@gmail.com.', 'is-error');
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+        if (btnLabel) btnLabel.textContent = originalLabel;
+      }
+    });
+  }
+
 })();

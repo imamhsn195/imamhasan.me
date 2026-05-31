@@ -43,6 +43,46 @@
 
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0a0a'/%3E%3Ctext x='50' y='66' font-family='Inter,sans-serif' font-size='52' font-weight='800' fill='%234f8cff' text-anchor='middle'%3EIH%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Imam Hasan",
+    "url": "https://imamhasan.me",
+    "image": "https://imamhasan.me/assets/images/imamhasan/imam_hasan_gitex.png",
+    "jobTitle": "Software Engineer",
+    "description": "Software Engineer specialising in Laravel and Spring Boot, building production e-commerce, warehouse fulfilment, and payment systems.",
+    "email": "mailto:imamhsn195@gmail.com",
+    "telephone": "+971528575908",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "X Hub Technologies LLC"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dubai",
+      "addressCountry": "AE"
+    },
+    "knowsAbout": ["Laravel", "PHP", "Spring Boot", "Java", "MySQL", "Vue.js", "Next.js", "Payment Integrations", "Conversion Tracking", "REST APIs"],
+    "sameAs": [
+      "https://github.com/imamhsn195",
+      "https://www.linkedin.com/in/imamhsn195"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Imam Hasan — Software Engineer",
+    "url": "https://imamhasan.me"
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#about">Skip to content</a>
@@ -127,6 +167,12 @@
           <a href="#contact" class="btn btn-ghost magnetic">
             <span>Get in touch</span>
           </a>
+          <!-- Download CV button: drop your résumé at assets/Imam_Hasan_CV.pdf and uncomment.
+          <a href="assets/Imam_Hasan_CV.pdf" class="btn btn-ghost magnetic" download aria-label="Download Imam Hasan's CV (PDF)">
+            <span>Download CV</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          </a>
+          -->
         </div>
         <div class="hero-proof reveal" aria-label="Professional highlights">
           <span>Shipping Laravel since 2018</span>
@@ -164,7 +210,7 @@
           <div class="stat-label">public projects on GitHub</div>
         </div>
         <div class="stat reveal">
-          <div class="stat-num" data-target="5">0</div>
+          <div class="stat-num" data-target="6">0</div>
           <div class="stat-suffix">+ gateways</div>
           <div class="stat-label">payment integrations shipped</div>
         </div>
@@ -201,6 +247,15 @@
             <a href="https://github.com/imamhsn195/laravel-theme-manager" target="_blank" rel="noopener">laravel-theme-manager</a>),
             and maintain a broad set of side projects on GitHub.
           </p>
+          <div class="principles">
+            <h3 class="principles-title">How I work</h3>
+            <ul class="principles-list">
+              <li><strong>Correctness before cleverness.</strong> When money and inventory move through the code, idempotency, audit trails, and predictable failure modes come first.</li>
+              <li><strong>Patterns that travel.</strong> What proves itself on one store becomes a reusable pattern the whole portfolio inherits — auth, push, tracking, payments.</li>
+              <li><strong>Own the whole slice.</strong> From migration to webhook to admin UI to mobile endpoint, I'd rather ship a feature end-to-end than hand off half of it.</li>
+              <li><strong>Boring, observable systems.</strong> Logs, status pages, and config-driven toggles over heroics — so things stay debuggable at 2&nbsp;a.m.</li>
+            </ul>
+          </div>
         </div>
         <aside class="about-side reveal">
           <figure class="about-photo">
@@ -209,7 +264,7 @@
           <div class="about-card">
             <h3>Specialised in</h3>
             <ul class="about-list">
-              <li>Payment integrations — N-Genius, Tamara, Tabby, X-Terms, Stripe</li>
+              <li>Payment integrations — N-Genius, Tamara, Tabby, Stripe, PayPal, Ziina</li>
               <li>Conversion tracking — Meta CAPI, TikTok Events, Stape sGTM</li>
               <li>Warehouse &amp; fulfilment systems — bin-level inventory, OrderWorkflow state machines</li>
               <li>Auth hardening — TOTP 2FA, OTP rate-limiting, RBAC with Spatie</li>
@@ -256,7 +311,7 @@
           </div>
           <h3>Database</h3>
           <ul>
-            <li>MySQL · MariaDB</li><li>Eloquent ORM</li><li>Doctrine DBAL</li><li>Redis (caching)</li><li>JPA / Hibernate</li>
+            <li>MySQL · MariaDB</li><li>Eloquent ORM</li><li>Redis (caching)</li><li>JPA / Hibernate</li>
           </ul>
         </div>
         <div class="stack-card reveal">
@@ -274,7 +329,7 @@
           </div>
           <h3>Integrations</h3>
           <ul>
-            <li>N-Genius · Tamara · Tabby · X-Terms · Stripe</li><li>Meta CAPI · TikTok Events · Stape sGTM</li><li>Twilio (SMS / WhatsApp)</li><li>Quiqup · SMSA · Halan · Topex · GetGive</li><li>Odoo (XML-RPC) · CHUB · Meshy AI</li>
+            <li>N-Genius · Tamara · Tabby · Stripe · PayPal · Ziina</li><li>Meta CAPI · TikTok Events · Stape sGTM</li><li>Twilio (SMS / WhatsApp)</li><li>Quiqup · SMSA · Halan · Topex · GetGive</li><li>Odoo (XML-RPC) · CHUB · Meshy AI</li>
           </ul>
         </div>
         <div class="stack-card reveal">
@@ -321,7 +376,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>VAPID</span><span>FCM</span><span>SMSA</span><span>TOTP</span>
             </div>
-            <a href="https://chub.ae/" target="_blank" rel="noopener" class="work-link" data-domain="chub_warehouse">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://chub.ae/" target="_blank" rel="noopener" class="work-link" data-domain="chub_warehouse" aria-label="Visit the Chub Warehouse live site">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -345,7 +400,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>Tamara</span><span>Tabby</span><span>Halan</span><span>Spatie</span>
             </div>
-            <a href="https://odor.ae/" target="_blank" rel="noopener" class="work-link" data-domain="odor-perfumes">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://odor.ae/" target="_blank" rel="noopener" class="work-link" data-domain="odor-perfumes" aria-label="Visit the Odor Perfumes live site">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -363,13 +418,13 @@
             <li>TOTP 2FA admin + email-OTP fallback + xterms.accepted gate + Spatie roles</li>
             <li>Extra-payment requests on existing orders (top-up via WhatsApp / email / cash / waive)</li>
             <li>In-app notification bell + Logs notification bell + AI-assisted "suggest description"</li>
-            <li>X-Terms BNPL + Tabby BNPL + N-Genius + COD with configurable fee</li>
+            <li>Tabby BNPL + N-Genius + COD with configurable fee + X-Terms agreement gate</li>
           </ul>
           <div class="work-foot">
             <div class="work-stack">
               <span>Laravel 10</span><span>TOTP</span><span>Meta CAPI</span><span>TikTok</span><span>APNs</span>
             </div>
-            <a href="https://www.proboxs.com/" target="_blank" rel="noopener" class="work-link" data-domain="proboxs">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://www.proboxs.com/" target="_blank" rel="noopener" class="work-link" data-domain="proboxs" aria-label="Visit the Proboxs live site">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -388,7 +443,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>Odoo</span><span>Pushok</span><span>Meta CAPI</span>
             </div>
-            <a href="https://antiqa.ae/" target="_blank" rel="noopener" class="work-link" data-domain="antiqa">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://antiqa.ae/" target="_blank" rel="noopener" class="work-link" data-domain="antiqa" aria-label="Visit the Antiqa live site">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -407,7 +462,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>Tailwind</span><span>Stape</span><span>Odoo</span>
             </div>
-            <a href="https://ojo.ae/" target="_blank" rel="noopener" class="work-link" data-domain="ojo">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://ojo.ae/" target="_blank" rel="noopener" class="work-link" data-domain="ojo" aria-label="Visit the Ojo live site">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -426,7 +481,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>Meta CAPI</span><span>Meshy AI</span><span>TOTP</span>
             </div>
-            <a href="https://ducks.ae/" target="_blank" rel="noopener" class="work-link" data-domain="ducks">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://ducks.ae/" target="_blank" rel="noopener" class="work-link" data-domain="ducks" aria-label="Visit the Ducks live site">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -445,7 +500,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>Tailwind 4</span><span>Spatie</span><span>Tabby</span>
             </div>
-            <a href="https://raheeq.ae/" target="_blank" rel="noopener" class="work-link" data-domain="raheeq">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://raheeq.ae/" target="_blank" rel="noopener" class="work-link" data-domain="raheeq" aria-label="Visit the Raheeq live site">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -464,7 +519,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>Tamara</span><span>GetGive</span><span>Quiqup</span>
             </div>
-            <a href="https://www.bonossuae.com/" target="_blank" rel="noopener" class="work-link" data-domain="bonoss">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://www.bonossuae.com/" target="_blank" rel="noopener" class="work-link" data-domain="bonoss" aria-label="Visit the Bonoss live site">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -483,7 +538,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>Odoo</span><span>CHUB</span><span>Meta CAPI</span>
             </div>
-            <a href="https://www.capio.ae/" target="_blank" rel="noopener" class="work-link" data-domain="capio_caps">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://www.capio.ae/" target="_blank" rel="noopener" class="work-link" data-domain="capio_caps" aria-label="Visit the Capio Caps live site">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -502,7 +557,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>Stripe</span><span>Tabby</span><span>Tailwind 4</span>
             </div>
-            <a href="https://greenhand.ae/" target="_blank" rel="noopener" class="work-link" data-domain="greenhand">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://greenhand.ae/" target="_blank" rel="noopener" class="work-link" data-domain="greenhand" aria-label="Visit the Greenhand live site">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -521,7 +576,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>Tamara SDK</span><span>X-Terms</span>
             </div>
-            <a href="https://voguecult.com/" target="_blank" rel="noopener" class="work-link" data-domain="voguecult">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://voguecult.com/" target="_blank" rel="noopener" class="work-link" data-domain="voguecult" aria-label="Visit the Voguecult live site">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -540,7 +595,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>Stape</span><span>Sanctum</span><span>CHUB</span>
             </div>
-            <a href="https://swords.ae/" target="_blank" rel="noopener" class="work-link" data-domain="swords">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://swords.ae/" target="_blank" rel="noopener" class="work-link" data-domain="swords" aria-label="Visit the Swords live site">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -559,7 +614,7 @@
             <div class="work-stack">
               <span>Laravel 10</span><span>Tailwind 4</span><span>Vite 7</span><span>Spatie</span>
             </div>
-            <a href="https://trtba.com/" target="_blank" rel="noopener" class="work-link" data-domain="trtba">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="https://trtba.com/" target="_blank" rel="noopener" class="work-link" data-domain="trtba" aria-label="Visit the Trtba live site">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
           </div>
         </article>
 
@@ -704,7 +759,7 @@
             <h4>X Hub Technologies LLC <span class="timeline-sep">·</span> Nolo platform</h4>
             <ul>
               <li>Engineering across a 13-store retail e-commerce portfolio + warehouse fulfilment hub + iOS POS API.</li>
-              <li>Built and maintained payment integrations across N-Genius, Tamara, Tabby, X-Terms, Stripe + token-protected custom-order payment links.</li>
+              <li>Built and maintained payment integrations across N-Genius, Tamara, Tabby, Stripe, PayPal, and Ziina + token-protected custom-order payment links.</li>
               <li>Authored the canonical TOTP 2FA + OTP-hardening + VAPID web-push patterns now reused across the portfolio.</li>
               <li>Designed bin-level inventory + reservations + multi-client baskets + OrderWorkflow state machine for the warehouse hub.</li>
               <li>Wired conversion tracking (Meta CAPI + TikTok Events + Stape sGTM) with idempotency, dedup, and Stape proxy modes.</li>
@@ -814,6 +869,36 @@
             </span>
           </a>
         </div>
+
+        <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+          <!-- Replace with your Web3Forms access key from https://web3forms.com -->
+          <input type="hidden" name="access_key" value="792ef176-2fb1-4322-bd95-98582727363d" />
+          <input type="hidden" name="subject" value="New message from imamhasan.me" />
+          <input type="hidden" name="from_name" value="imamhasan.me portfolio" />
+          <input type="checkbox" name="botcheck" class="contact-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div class="contact-form-row">
+            <div class="contact-field">
+              <label for="cf-name">Name</label>
+              <input type="text" id="cf-name" name="name" required autocomplete="name" placeholder="Your name" />
+            </div>
+            <div class="contact-field">
+              <label for="cf-email">Email</label>
+              <input type="email" id="cf-email" name="email" required autocomplete="email" placeholder="you@company.com" />
+            </div>
+          </div>
+          <div class="contact-field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="4" required placeholder="What are you building, and how can I help?"></textarea>
+          </div>
+          <div class="contact-form-actions">
+            <button type="submit" class="btn btn-primary contact-submit">
+              <span class="contact-submit-label">Send message</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <p class="contact-form-status" id="contactStatus" role="status" aria-live="polite"></p>
+          </div>
+        </form>
       </div>
     </div>
   </section>
@@ -832,5 +917,9 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <!-- Cloudflare Web Analytics — privacy-friendly, no cookies.
+       Replace YOUR_CLOUDFLARE_TOKEN with the token from your Cloudflare Web Analytics site. -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "bfdd1f8392754cbebd7c83fac0671e2f"}'></script>
 </body>
 </html>
