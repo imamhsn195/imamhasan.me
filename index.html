@@ -1,1672 +1,807 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Imam Hasan</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imam Hasan — Software Engineer · Laravel · Spring Boot · Dubai</title>
+  <meta name="description" content="Software Engineer based in Dubai. 5+ years Laravel, 2+ years Spring Boot, specialised in payment integrations, conversion tracking, warehouse systems, and Laravel architecture at scale." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://imamhasan.me/" />
 
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Imam Hasan — Software Engineer" />
+  <meta property="og:description" content="5+ years Laravel · 2+ years Spring Boot · 13 production e-commerce stores · Dubai, UAE" />
+  <meta property="og:url" content="https://imamhasan.me" />
+  <meta property="og:site_name" content="Imam Hasan" />
+  <meta property="og:image" content="https://imamhasan.me/assets/images/og-cover.jpg" />
 
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Imam Hasan — Software Engineer" />
+  <meta name="twitter:description" content="Laravel and Spring Boot engineer building production commerce systems in Dubai." />
+  <meta name="twitter:image" content="https://imamhasan.me/assets/images/og-cover.jpg" />
 
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/custom.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    .dev_tools_img{
-      width: 70% !important;
-    }
-    figure.avatar-box {
-      background: transparent;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0a0a'/%3E%3Ctext x='50' y='66' font-family='Inter,sans-serif' font-size='52' font-weight='800' fill='%234f8cff' text-anchor='middle'%3EIH%3C/text%3E%3C/svg%3E" />
 </head>
-
 <body>
+  <a class="skip-link" href="#about">Skip to content</a>
 
-  <!--
-    - #MAIN
-  -->
+  <!-- Animated background orbs -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
 
-  <main>
+  <!-- Grid pattern overlay -->
+  <div class="grid-overlay" aria-hidden="true"></div>
 
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar active" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/imam_hasan.png" alt="Imam Hasan" width="80" style="border-radius: 50%;">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Imam Hasan">Imam Hasan</h1>
-          <span class="title" style="margin-block-end: 0.2rem;">Spring Boot & Laravel</span>
-          <span class="title" style="margin-block-end: 0.2rem;">API Development & Testing</span>
-          <span class="title" style="margin-block-end: 0.2rem;">Project Management (Jira)</span>
-          <span class="title" style="margin-block-end: 0.2rem;">Version Control (Git)</span>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:imamhsn195@gmail.com" class="contact-link">imamhsn195@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+971 528575908" class="contact-link">+971 528575908</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1994-01-20">January 20, 1994</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="document-text-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Resume</p>
-              <button 
-                data-component="IconButton" 
-                type="button" 
-                aria-label="Download raw content" 
-                data-testid="download-raw-button" 
-                data-loading="false" 
-                data-no-visuals="true" 
-                data-size="small" 
-                data-variant="default" 
-                aria-describedby=":Rtcsptal9lab:-loading-announcement" 
-                data-hotkey="Control+Shift+S"
-                onclick="downloadResume()"
-                style="color: white; padding: 10px 20px; border-radius: 4px; font-size: 14px; cursor: pointer; display: inline-block; align-items: center; justify-content: center; transition: background-color 0.3s ease, border-color 0.3s ease;">
-                Download
-                <svg aria-hidden="true" focusable="false" class="octicon octicon-download" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible; margin-right: 8px;">
-                  <path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"></path>
-                  <path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"></path>
-                </svg>
-              </button>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://www.facebook.com/hasanhossen" class="social-link" target="_blank">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://twitter.com/Imamhsn" class="social-link" target="_blank">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://github.com/imamhsn195" class="social-link" target="_blank">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <!-- <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li> -->
-
-          <!-- <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li> -->
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo">
+        <span class="nav-logo-mark">IH</span>
+        <span class="nav-logo-text">Imam Hasan</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#stack">Stack</a>
+        <a href="#work">Work</a>
+        <a href="#oss">Open Source</a>
+        <a href="#experience">Experience</a>
       </nav>
+      <a href="#contact" class="nav-cta">
+        <span>Get in touch</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero-inner hero-layout">
+      <div class="hero-content">
+        <div class="hero-tag reveal">
+          <span class="hero-tag-dot"></span>
+          <span>Available for senior engineering roles</span>
+        </div>
+        <h1 class="hero-title reveal">
+          <span>Software engineer</span>
+          <span>building <span class="accent">production</span></span>
+          <span>commerce platforms.</span>
+        </h1>
+        <p class="hero-sub reveal">
+          5+ years on Laravel, 2+ on Spring Boot. Currently shipping a 13-store e-commerce
+          portfolio + warehouse fulfilment hub + iOS POS API for the Nolo platform out of Dubai.
+        </p>
+        <div class="hero-meta reveal">
+          <div class="hero-meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Dubai, UAE</span>
+          </div>
+          <div class="hero-meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            <span>X Hub Technologies LLC · Nolo platform</span>
+          </div>
+          <div class="hero-meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span>Laravel · Spring Boot · MySQL · Vue · Next.js</span>
+          </div>
+        </div>
+        <div class="hero-ctas reveal">
+          <a href="#work" class="btn btn-primary magnetic">
+            <span>View work</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost magnetic">
+            <span>Get in touch</span>
+          </a>
+        </div>
+        <div class="hero-proof reveal" aria-label="Professional highlights">
+          <span>5+ years shipping Laravel systems</span>
+          <span>13-store commerce portfolio</span>
+          <span>72 public repositories</span>
+        </div>
+      </div>
+      <div class="hero-media reveal">
+        <img src="assets/images/imamhasan/imam_hasan.png" alt="Imam Hasan portrait" width="540" height="640" loading="eager" decoding="async" />
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
 
+  <!-- Stats -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat reveal">
+          <div class="stat-num" data-target="5">0</div>
+          <div class="stat-suffix">+ years</div>
+          <div class="stat-label">Laravel in production</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-num" data-target="13">0</div>
+          <div class="stat-suffix"> stores</div>
+          <div class="stat-label">live e-commerce platforms shipped</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-num" data-target="72">0</div>
+          <div class="stat-suffix">+ repos</div>
+          <div class="stat-label">public projects on GitHub</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-num" data-target="2">0</div>
+          <div class="stat-suffix">+ years</div>
+          <div class="stat-label">Spring Boot &amp; Java</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-
-          <p>Assalamu Alaikum,</p>
-
-          <p>Thanks for reaching out—it’s great to get you!</p>
-
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow">01 — About</span>
+        <h2 class="section-title">A backend-leaning engineer who ships <span class="accent">end-to-end</span>.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
           <p>
-            I’m a skilled Software Engineer with <b>5+ years of experience in Laravel</b> and <b>2+ years in Spring Boot</b>, along with expertise in API development and testing with Postman and Swagger. I’ve worked on <b>ERP systems, commercial websites, POS systems</b>, and <b>inventory management solutions</b>, focusing on creating scalable and efficient applications.
-          </p>  
-
+            I'm Imam Hasan — a software engineer based in Dubai with a 5-year focus on Laravel and
+            a 2-year stint with Spring Boot for high-throughput JVM systems. Currently at
+            <strong>X Hub Technologies LLC</strong>, leading engineering on the Nolo platform:
+            a 13-store retail e-commerce portfolio, a multi-tenant warehouse fulfilment hub, and the
+            companion Nolo iOS POS app.
+          </p>
           <p>
-            I’m also experienced in <b>MySQL database design</b>, version control with Git, and collaborating with teams using GitLab and Slack. My work in <b>Laravel</b> includes building dynamic dashboards, payment gateway integrations, and RESTful APIs, ensuring high-quality solutions and seamless user experiences tailored to client needs.
-          </p>  
-
+            My work tends to live where business logic gets real: payment gateways with idempotent
+            webhooks, conversion tracking that survives ad-blockers, warehouse inventory with
+            bin-level truth, audit-grade order workflows, and OTP/TOTP auth flows that don't get
+            owned. I write the kind of services that have to be right because money moves through them.
+          </p>
           <p>
-            Let me know if you’d like to chat more about my experience! 
-          </p> 
+            Outside the day job I publish open-source Laravel packages
+            (<a href="https://github.com/imamhsn195/laravel-system-logs" target="_blank" rel="noopener">laravel-system-logs</a>,
+            <a href="https://github.com/imamhsn195/laravel-Interactive-map" target="_blank" rel="noopener">laravel-Interactive-map</a>,
+            <a href="https://github.com/imamhsn195/laravel-theme-manager" target="_blank" rel="noopener">laravel-theme-manager</a>),
+            and maintain a broad set of side projects on GitHub.
+          </p>
+        </div>
+        <aside class="about-side reveal">
+          <figure class="about-photo">
+            <img src="assets/images/imamhasan/imam_hasan_2.jpg" alt="Imam Hasan in professional portrait" width="560" height="700" loading="lazy" decoding="async" />
+          </figure>
+          <div class="about-card">
+            <h3>Specialised in</h3>
+            <ul class="about-list">
+              <li>Payment integrations — N-Genius, Tamara, Tabby, X-Terms, Stripe</li>
+              <li>Conversion tracking — Meta CAPI, TikTok Events, Stape sGTM</li>
+              <li>Warehouse &amp; fulfilment systems — bin-level inventory, OrderWorkflow state machines</li>
+              <li>Auth hardening — TOTP 2FA, OTP rate-limiting, RBAC with Spatie</li>
+              <li>Push notifications — VAPID web push, APNs, FCM, service workers</li>
+              <li>Mobile APIs — Sanctum bearer tokens, HMAC-signed metrics endpoints</li>
+              <li>ERP integrations — Odoo XML-RPC, CHUB warehouse sync</li>
+              <li>Couriers — Quiqup, SMSA, Halan, Topex, GetGive, DHL</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
 
-          <!-- <p>
-            I am a skilled Software Engineer with expertise in Spring Boot, API development, testing with Postman and Swagger, and project management using Jira. I have experience in building and maintaining ERP systems, commercial websites, POS systems, and inventory management solutions. My work also includes database design with MySQL, version control with Git, and collaborating with teams using GitLab and Slack. With a focus on creating scalable and efficient applications, I deliver high-quality solutions tailored to meet client needs while ensuring seamless user experiences.
-          </p> -->
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/Spring Boot & Laravel.jpg" alt="design icon" width="100">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Spring Boot & Laravel</h4>
-
-                <p class="service-item-text">
-                  Developing scalable backend applications with Java (Spring Boot) and PHP (Laravel).
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/API Development & Testing.jpg" alt="Web development icon" width="100">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">API Development & Testing</h4>
-
-                <p class="service-item-text">
-                  Creating and testing APIs with tools like Postman and Swagger.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/Project Management (Jira).jpg" alt="mobile app icon" width="100">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Project Management (Jira)</h4>
-
-                <p class="service-item-text">
-                  Managing tasks, sprints, and team collaboration efficiently.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/Version Control (Git).jpg" alt="camera icon" width="100">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Version Control (Git)</h4>
-
-                <p class="service-item-text">
-                  Ensuring smooth code management and collaboration using Git and GitHub.
-                </p>
-              </div>
-
-            </li>
-
+  <!-- Tech Stack -->
+  <section class="section" id="stack">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow">02 — Stack</span>
+        <h2 class="section-title">The tools I reach for <span class="accent">first</span>.</h2>
+      </div>
+      <div class="stack-grid">
+        <div class="stack-card reveal">
+          <div class="stack-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Backend</h3>
+          <ul>
+            <li>Laravel 10/11</li><li>PHP 8.x</li><li>Spring Boot</li><li>Java 17</li><li>Node.js · Express</li><li>Yii</li>
           </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/client_zone.jpg" alt="Elite Zone Delivery Services" width="60" data-testimonials-avatar style="border-radius: 20px 20px;">
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Elite Zone Delivery Services</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    We have no hesitation in recommending Imam as a Web Application Developer. His dedication, technical expertise, and team-oriented mindset make him a valuable asset to any organization, and We consider ourselves fortunate to have had the opportunity to work with him.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-            
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/client_af.jpg" alt="Asia Fashion" width="60" data-testimonials-avatar style="border-radius: 20px 20px;">
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Asia Fashion</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Imam Hasan was hired to create a corporate identity. We were very pleased with the work done. He has a
-                    lot of experience
-                    and is very concerned about the needs of client.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/client_rs.jpg" alt="Ringer Soft Ltd." width="60" data-testimonials-avatar style="border-radius: 20px 20px;">
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Ringer Soft Ltd.</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Imam Hasan was hired to create a corporate identity. We were very pleased with the work done. He has a
-                    lot of experience
-                    and is very concerned about the needs of client.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <!-- <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Imam Hasan was hired to create a corporate identity. We were very pleased with the work done. He has a
-                    lot of experience
-                    and is very concerned about the needs of client.
-                  </p>
-                </div>
-
-              </div>
-            </li> -->
-
+        </div>
+        <div class="stack-card reveal">
+          <div class="stack-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+          </div>
+          <h3>Frontend</h3>
+          <ul>
+            <li>Blade · Vite</li><li>Tailwind CSS</li><li>Bootstrap</li><li>Vue.js</li><li>React · Next.js</li><li>Angular · TypeScript</li>
           </ul>
+        </div>
+        <div class="stack-card reveal">
+          <div class="stack-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
+          </div>
+          <h3>Database</h3>
+          <ul>
+            <li>MySQL · MariaDB</li><li>Eloquent ORM</li><li>Doctrine DBAL</li><li>Redis (caching)</li><li>JPA / Hibernate</li>
+          </ul>
+        </div>
+        <div class="stack-card reveal">
+          <div class="stack-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+          </div>
+          <h3>Mobile / API</h3>
+          <ul>
+            <li>Laravel Sanctum</li><li>REST APIs</li><li>APNs Apple Push</li><li>FCM</li><li>HMAC-signed endpoints</li>
+          </ul>
+        </div>
+        <div class="stack-card reveal">
+          <div class="stack-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Integrations</h3>
+          <ul>
+            <li>N-Genius · Tamara · Tabby · X-Terms · Stripe</li><li>Meta CAPI · TikTok Events · Stape sGTM</li><li>Twilio (SMS / WhatsApp)</li><li>Quiqup · SMSA · Halan · Topex · GetGive</li><li>Odoo (XML-RPC) · CHUB · Meshy AI</li>
+          </ul>
+        </div>
+        <div class="stack-card reveal">
+          <div class="stack-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+          </div>
+          <h3>Auth &amp; Security</h3>
+          <ul>
+            <li>TOTP 2FA (google2fa-laravel)</li><li>OTP hardening (CSPRNG · hash_equals · RateLimiter)</li><li>Spatie Permission RBAC</li><li>VAPID web push</li><li>Cloudflare Turnstile</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        </section>
+  <!-- Featured Work -->
+  <section class="section section-work" id="work">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow">03 — Featured Work</span>
+        <h2 class="section-title">13 production e-commerce platforms <span class="accent">in the Nolo family</span>.</h2>
+        <p class="section-sub">A curated retail portfolio I lead engineering on — multi-brand UAE/GCC commerce, a warehouse fulfilment hub, and an iOS POS companion app.</p>
+      </div>
 
+      <div class="work-grid">
 
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img style="border-radius: 20px 20px;">
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+        <article class="work-card featured reveal">
+          <div class="work-card-head">
+            <div class="work-meta">
+              <span class="work-tag work-tag-gold">Gold standard</span>
+              <span class="work-tag">Warehouse</span>
             </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
+            <h3>Chub Warehouse</h3>
+            <p class="work-tagline">Source of truth for the group — fulfilment hub with bin-level inventory, baskets, OrderWorkflow state machine, VAPID web push, and three-layer auth.</p>
+          </div>
+          <ul class="work-bullets">
+            <li>Bin-level inventory truth + reservations + multi-client baskets</li>
+            <li>VAPID web push (gold) + sw.js + FCM mobile push + config-driven channel toggles</li>
+            <li>TOTP 2FA gold standard with reset-2FA email flow</li>
+            <li>Public REST API: API key + secret per-client + per-route OTP rate limits</li>
+            <li>Public status page + monthly client report Excel + storage/fulfilment fees billing</li>
+          </ul>
+          <div class="work-foot">
+            <div class="work-stack">
+              <span>Laravel 10</span><span>VAPID</span><span>FCM</span><span>SMSA</span><span>TOTP</span>
             </div>
+            <a href="#" class="work-link" data-domain="chub_warehouse">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          </div>
+        </article>
 
-          </section>
+        <article class="work-card featured reveal">
+          <div class="work-card-head">
+            <div class="work-meta">
+              <span class="work-tag work-tag-gold">Gold standard</span>
+              <span class="work-tag">Fragrance</span>
+            </div>
+            <h3>Odor Perfumes</h3>
+            <p class="work-tagline">Tamara BNPL gold-standard implementation + multi-branch POS with cash sessions + plan-tier feature flags (Basic / Growth / Enterprise).</p>
+          </div>
+          <ul class="work-bullets">
+            <li>Tamara HS256 JWT validation + two-path idempotent webhook + capture + refund</li>
+            <li>Multi-branch POS, cash sessions, staff attendance, inter-branch stock transfer</li>
+            <li>Halan courier (next-day) + Quiqup (same-day, OAuth2) integrations</li>
+            <li>Profile-change approval queue + gift campaign auto-attach</li>
+            <li>4-theme storefront, multi-language EN/AR + multi-currency + multi-country</li>
+          </ul>
+          <div class="work-foot">
+            <div class="work-stack">
+              <span>Laravel 10</span><span>Tamara</span><span>Tabby</span><span>Halan</span><span>Spatie</span>
+            </div>
+            <a href="#" class="work-link" data-domain="odor-perfumes">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          </div>
+        </article>
 
+        <article class="work-card featured reveal">
+          <div class="work-card-head">
+            <div class="work-meta">
+              <span class="work-tag work-tag-gold">Gold standard</span>
+              <span class="work-tag">Multi-channel</span>
+            </div>
+            <h3>Proboxs</h3>
+            <p class="work-tagline">Unified Meta + TikTok + Stape conversion tracking + iOS POS companion + extra-payment requests + in-app order notification bell.</p>
+          </div>
+          <ul class="work-bullets">
+            <li>Server-side Meta CAPI + TikTok Events + Stape sGTM with shared event ID dedup</li>
+            <li>TOTP 2FA admin + email-OTP fallback + xterms.accepted gate + Spatie roles</li>
+            <li>Extra-payment requests on existing orders (top-up via WhatsApp / email / cash / waive)</li>
+            <li>In-app notification bell + Logs notification bell + AI-assisted "suggest description"</li>
+            <li>X-Terms BNPL + Tabby BNPL + N-Genius + COD with configurable fee</li>
+          </ul>
+          <div class="work-foot">
+            <div class="work-stack">
+              <span>Laravel 10</span><span>TOTP</span><span>Meta CAPI</span><span>TikTok</span><span>APNs</span>
+            </div>
+            <a href="#" class="work-link" data-domain="proboxs">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-card-head">
+            <div class="work-meta"><span class="work-tag">Multi-brand</span></div>
+            <h3>Antiqa</h3>
+            <p class="work-tagline">Multi-brand UAE/GCC commerce with the heaviest Odoo wiring in the family — full bidirectional XML-RPC sync with image-write-date tracking.</p>
+          </div>
+          <ul class="work-bullets">
+            <li>Most-statused order shape: <code>status</code> + <code>chub_status</code> + <code>odoo_status</code> + <code>quiqup_status</code></li>
+            <li>Quiqup auto-routes by destination (local AE COD vs GCC export with HS codes)</li>
+            <li>3-theme storefront (z3 / abaya / maj), bilingual EN/AR with RTL</li>
+          </ul>
+          <div class="work-foot">
+            <div class="work-stack">
+              <span>Laravel 10</span><span>Odoo</span><span>Pushok</span><span>Meta CAPI</span>
+            </div>
+            <a href="#" class="work-link" data-domain="antiqa">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-card-head">
+            <div class="work-meta"><span class="work-tag">Tailwind</span></div>
+            <h3>Ojo</h3>
+            <p class="work-tagline">Most-themed sibling — 4-theme storefront with the first <code>tracking_mode</code> enum runtime toggle in the family (Stape ↔ direct CAPI).</p>
+          </div>
+          <ul class="work-bullets">
+            <li>4-theme Tailwind storefront (z3 / abaya / maj / fresh)</li>
+            <li><code>TrackingDispatcher</code> service routes events through active mode</li>
+            <li>Custom <code>SendMetaPageViewCapi</code> middleware for server-side page-view events</li>
+          </ul>
+          <div class="work-foot">
+            <div class="work-stack">
+              <span>Laravel 10</span><span>Tailwind</span><span>Stape</span><span>Odoo</span>
+            </div>
+            <a href="#" class="work-link" data-domain="ojo">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-card-head">
+            <div class="work-meta"><span class="work-tag">Collectibles</span></div>
+            <h3>Ducks</h3>
+            <p class="work-tagline">Lean Meta+Stape CAPI variant + Meshy AI 3D models + idempotent N-Genius webhook with queued processing.</p>
+          </div>
+          <ul class="work-bullets">
+            <li>3D models on products via Meshy AI (admin upload OR generate from photos)</li>
+            <li>Two guest-EMQ improvements (shipping-name fallback + hashed-PII) in <code>OrderPurchaseCapiService</code></li>
+            <li>Single-active-per-user Sanctum token (revoke previous device on new login)</li>
+          </ul>
+          <div class="work-foot">
+            <div class="work-stack">
+              <span>Laravel 10</span><span>Meta CAPI</span><span>Meshy AI</span><span>TOTP</span>
+            </div>
+            <a href="#" class="work-link" data-domain="ducks">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-card-head">
+            <div class="work-meta"><span class="work-tag">Perfume / Oudh</span></div>
+            <h3>Raheeq</h3>
+            <p class="work-tagline">Spatie Permission with 107 permissions across 4 roles + encrypted CAPI tokens at rest + <code>MultiAuthAuditor</code> for cross-guard audit.</p>
+          </div>
+          <ul class="work-bullets">
+            <li>Multi-language EN/AR + multi-country (UAE/SA/KW/OM/QA/BH) + multi-currency</li>
+            <li>3-mode tracking enum (Stape / Individual / both gated per-channel)</li>
+            <li>Tabby two-path idempotent (redirect + webhook reuse same handler)</li>
+          </ul>
+          <div class="work-foot">
+            <div class="work-stack">
+              <span>Laravel 10</span><span>Tailwind 4</span><span>Spatie</span><span>Tabby</span>
+            </div>
+            <a href="#" class="work-link" data-domain="raheeq">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-card-head">
+            <div class="work-meta"><span class="work-tag">Automotive</span></div>
+            <h3>Bonoss</h3>
+            <p class="work-tagline">Niche automotive aftermarket with Brand→Model→Year fitment lookup + DOB approval workflow + double-audit log (Owen-IT + JSON history).</p>
+          </div>
+          <ul class="work-bullets">
+            <li>ONLY sibling with car-fitment lookup (Brand → CarModel → year triple)</li>
+            <li>Address snapshotted onto order — historical orders immutable</li>
+            <li>Tiered loyalty (silver/gold/platinum) with point expiry</li>
+          </ul>
+          <div class="work-foot">
+            <div class="work-stack">
+              <span>Laravel 10</span><span>Tamara</span><span>GetGive</span><span>Quiqup</span>
+            </div>
+            <a href="#" class="work-link" data-domain="bonoss">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-card-head">
+            <div class="work-meta"><span class="work-tag">Headwear</span></div>
+            <h3>Capio Caps</h3>
+            <p class="work-tagline">Custom headwear retailer with print-on-demand cap personalisation — custom name, custom number, badge upsell with image preview.</p>
+          </div>
+          <ul class="work-bullets">
+            <li>4-theme storefront (incl. dedicated <code>customorder</code> admin POS theme)</li>
+            <li>Full Odoo bidirectional sync + CHUB warehouse integration</li>
+            <li>Per-line custom-print pricing + badge image preview workflow</li>
+          </ul>
+          <div class="work-foot">
+            <div class="work-stack">
+              <span>Laravel 10</span><span>Odoo</span><span>CHUB</span><span>Meta CAPI</span>
+            </div>
+            <a href="#" class="work-link" data-domain="capio_caps">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-card-head">
+            <div class="work-meta"><span class="work-tag">CSR · Hybrid</span></div>
+            <h3>Greenhand</h3>
+            <p class="work-tagline">Hybrid e-commerce + CSR contributions platform — only sibling with Stripe (used exclusively for community-initiative contributions).</p>
+          </div>
+          <ul class="work-bullets">
+            <li>Versioned T&amp;C tracking per contribution + trade-license file upload</li>
+            <li>Three branded short-URL initiatives + amounts stored in fils (1/100 AED)</li>
+            <li>Full Tabby BNPL webhook handling + Meta + TikTok CAPI both wired</li>
+          </ul>
+          <div class="work-foot">
+            <div class="work-stack">
+              <span>Laravel 10</span><span>Stripe</span><span>Tabby</span><span>Tailwind 4</span>
+            </div>
+            <a href="#" class="work-link" data-domain="greenhand">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-card-head">
+            <div class="work-meta"><span class="work-tag">Tailoring</span></div>
+            <h3>Voguecult</h3>
+            <p class="work-tagline">Bespoke fashion with tailoring as a first-class feature — per-line custom-size JSON measurements + tailor-instruction print + dual approval queues.</p>
+          </div>
+          <ul class="work-bullets">
+            <li><code>OrderItem.custom_size</code> JSON + <code>custom_size_cost</code> surcharge model</li>
+            <li>Two parallel approval workflows (DOB + general profile-change)</li>
+            <li>Tamara via official <code>tamara-solution/php-sdk</code> + full webhook controller</li>
+          </ul>
+          <div class="work-foot">
+            <div class="work-stack">
+              <span>Laravel 10</span><span>Tamara SDK</span><span>X-Terms</span>
+            </div>
+            <a href="#" class="work-link" data-domain="voguecult">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-card-head">
+            <div class="work-meta"><span class="work-tag">UAE/GCC</span></div>
+            <h3>Swords</h3>
+            <p class="work-tagline">Multi-status order architecture (4 status fields) + full Nolo iOS-style mobile API + Stape sGTM + custom HMAC-signed metrics endpoint.</p>
+          </div>
+          <ul class="work-bullets">
+            <li>Multi-status orders (status + chub_status + odoo_status + quiqup_status)</li>
+            <li>Full <code>/api/mobile/v1/*</code> Sanctum-protected API surface</li>
+            <li>Brand-export ZIP action for external partner workflows</li>
+          </ul>
+          <div class="work-foot">
+            <div class="work-stack">
+              <span>Laravel 10</span><span>Stape</span><span>Sanctum</span><span>CHUB</span>
+            </div>
+            <a href="#" class="work-link" data-domain="swords">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-card-head">
+            <div class="work-meta"><span class="work-tag">Modern stack</span></div>
+            <h3>Trtba</h3>
+            <p class="work-tagline">Tailwind 4 + Vite 7 modern stack with niche fulfilment workflow — cookie/non-cookie order split + custom <code>deny.permission</code> middleware.</p>
+          </div>
+          <ul class="work-bullets">
+            <li>Custom <code>deny.permission:&lt;perm&gt;</code> middleware (inverse of <code>can:</code>)</li>
+            <li>Per-customer coupons via <code>coupon_customer</code> pivot with own usage limits</li>
+            <li>Topex polling fetch with <code>tryFetchLabelWithPolling</code> for async label retrieval</li>
+          </ul>
+          <div class="work-foot">
+            <div class="work-stack">
+              <span>Laravel 10</span><span>Tailwind 4</span><span>Vite 7</span><span>Spatie</span>
+            </div>
+            <a href="#" class="work-link" data-domain="trtba">Visit live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Open Source -->
+  <section class="section" id="oss">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow">04 — Open Source</span>
+        <h2 class="section-title">Things I've published <span class="accent">to GitHub</span>.</h2>
+        <p class="section-sub">A subset of <a href="https://github.com/imamhsn195?tab=repositories" target="_blank" rel="noopener">72 public repositories</a> — Laravel packages, full-stack apps, and learning labs across PHP, Java, JavaScript, and TypeScript.</p>
+      </div>
+      <div class="oss-grid">
+        <a href="https://github.com/imamhsn195/laravel-system-logs" target="_blank" rel="noopener" class="oss-card reveal">
+          <div class="oss-head">
+            <span class="oss-lang oss-php"></span>
+            <h3>laravel-system-logs</h3>
+          </div>
+          <p>Comprehensive Laravel package for viewing and managing system logs.</p>
+          <div class="oss-foot">
+            <span>PHP</span>
+            <span class="oss-star">★ 1</span>
+          </div>
+        </a>
+        <a href="https://github.com/imamhsn195/laravel-Interactive-map" target="_blank" rel="noopener" class="oss-card reveal">
+          <div class="oss-head">
+            <span class="oss-lang oss-blade"></span>
+            <h3>laravel-Interactive-map</h3>
+          </div>
+          <p>Laravel package for interactive maps using Leaflet.js — pluggable, themeable, blade-driven.</p>
+          <div class="oss-foot">
+            <span>Blade · PHP</span>
+            <span class="oss-star">2026</span>
+          </div>
+        </a>
+        <a href="https://github.com/imamhsn195/laravel-theme-manager" target="_blank" rel="noopener" class="oss-card reveal">
+          <div class="oss-head">
+            <span class="oss-lang oss-php"></span>
+            <h3>laravel-theme-manager</h3>
+          </div>
+          <p>Theme manager package for switching, packaging, and isolating Laravel storefront themes.</p>
+          <div class="oss-foot">
+            <span>PHP</span>
+            <span class="oss-star">2025</span>
+          </div>
+        </a>
+        <a href="https://github.com/imamhsn195/breeze-next" target="_blank" rel="noopener" class="oss-card reveal">
+          <div class="oss-head">
+            <span class="oss-lang oss-js"></span>
+            <h3>breeze-next</h3>
+          </div>
+          <p>Authentication starter kit frontend in Next.js for Laravel Breeze.</p>
+          <div class="oss-foot">
+            <span>JavaScript · Next.js</span>
+            <span class="oss-star">2024</span>
+          </div>
+        </a>
+        <a href="https://github.com/imamhsn195/Tic-Tac-Toe-React-Game" target="_blank" rel="noopener" class="oss-card reveal">
+          <div class="oss-head">
+            <span class="oss-lang oss-js"></span>
+            <h3>Tic-Tac-Toe-React-Game</h3>
+          </div>
+          <p>A clean, hooks-driven React Tic-Tac-Toe with state lifting and minimax-style turn logic.</p>
+          <div class="oss-foot">
+            <span>React · JavaScript</span>
+            <span class="oss-star">2026</span>
+          </div>
+        </a>
+        <a href="https://github.com/imamhsn195/messbook_laravel" target="_blank" rel="noopener" class="oss-card reveal">
+          <div class="oss-head">
+            <span class="oss-lang oss-php"></span>
+            <h3>messbook · full-stack trio</h3>
+          </div>
+          <p>Mess-management app shipped across Laravel + Express + Angular — three separate repos sharing a domain model.</p>
+          <div class="oss-foot">
+            <span>PHP · TypeScript · JS</span>
+            <span class="oss-star">★ 1</span>
+          </div>
+        </a>
+        <a href="https://github.com/imamhsn195/Spring-Franwork-Basics" target="_blank" rel="noopener" class="oss-card reveal">
+          <div class="oss-head">
+            <span class="oss-lang oss-java"></span>
+            <h3>Spring-Framework-Basics</h3>
+          </div>
+          <p>Hands-on Spring Boot fundamentals: IOC, beans, lifecycle, profiles, JPA wiring.</p>
+          <div class="oss-foot">
+            <span>Java · Spring</span>
+            <span class="oss-star">2025</span>
+          </div>
+        </a>
+        <a href="https://github.com/imamhsn195/SpringAOP" target="_blank" rel="noopener" class="oss-card reveal">
+          <div class="oss-head">
+            <span class="oss-lang oss-java"></span>
+            <h3>SpringAOP</h3>
+          </div>
+          <p>Aspect-Oriented Programming with the Spring framework — pointcuts, advice, interceptors.</p>
+          <div class="oss-foot">
+            <span>Java</span>
+            <span class="oss-star">2025</span>
+          </div>
+        </a>
+        <a href="https://github.com/imamhsn195/tailor" target="_blank" rel="noopener" class="oss-card reveal">
+          <div class="oss-head">
+            <span class="oss-lang oss-php"></span>
+            <h3>tailor</h3>
+          </div>
+          <p>Laravel-based bespoke-tailoring app pattern — per-item measurements + custom-size cost model.</p>
+          <div class="oss-foot">
+            <span>PHP · Laravel</span>
+            <span class="oss-star">2025</span>
+          </div>
+        </a>
+      </div>
+      <div class="oss-cta reveal">
+        <a href="https://github.com/imamhsn195?tab=repositories" target="_blank" rel="noopener" class="btn btn-ghost magnetic">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 0z"/></svg>
+          <span>Browse all 72 repos</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-eyebrow">05 — Experience</span>
+        <h2 class="section-title">Where I've been <span class="accent">shipping</span>.</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">2025 — Present</span>
+              <span class="timeline-loc">Dubai, UAE</span>
+            </div>
+            <h3>Software Engineer</h3>
+            <h4>X Hub Technologies LLC <span class="timeline-sep">·</span> Nolo platform</h4>
+            <ul>
+              <li>Engineering across a 13-store retail e-commerce portfolio + warehouse fulfilment hub + iOS POS API.</li>
+              <li>Built and maintained payment integrations across N-Genius, Tamara, Tabby, X-Terms, Stripe + token-protected custom-order payment links.</li>
+              <li>Authored the canonical TOTP 2FA + OTP-hardening + VAPID web-push patterns now reused across the portfolio.</li>
+              <li>Designed bin-level inventory + reservations + multi-client baskets + OrderWorkflow state machine for the warehouse hub.</li>
+              <li>Wired conversion tracking (Meta CAPI + TikTok Events + Stape sGTM) with idempotency, dedup, and Stape proxy modes.</li>
+              <li>Shipped a Sanctum-secured mobile API for the Nolo iOS POS app — auth, orders, custom orders, dashboard, devices, metrics with HMAC.</li>
+            </ul>
+          </div>
         </div>
 
-
-        <!--
-          - clients
-        -->
-
-        <section class="clients">
-
-          <h3 class="h3 clients-title">Languages & Frameworks</h3>
-
-          <ul class="clients-list has-scrollbar">
-            <li class="clients-item">
-              <a href="https://spring.io/projects/spring-boot" target="_blank">
-                <img src="./assets/images/web_tool_spring_boot.png" alt="Web Tool Spring Boot">
-              </a>
-            </li>
-            
-            <li class="clients-item">
-              <a href="https://www.java.com/en/" target="_blank">
-                <img src="./assets/images/web_tool_java.png" alt="JAVA">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://laravel.com/" target="_blank">
-                <img src="./assets/images/web_tool_laravel.png" alt="Laravel">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://www.php.net/" target="_blank">
-                <img src="./assets/images/web_tool_php.png" alt="PHP">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://nodejs.org/en/" target="_blank">
-                <img src="./assets/images/web_tool_nodejs.png" alt="Node">
-              </a>
-            </li>
-            
-            <li class="clients-item">
-              <a href="https://spring.io/projects/spring-boot" target="_blank">
-                <img src="./assets/images/web_tool_angular.png" alt="Web Tool Spring Boot">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://reactjs.org/" target="_blank">
-                <img src="./assets/images/web_tool_react.png" alt="React">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://flutter.dev/" target="_blank">
-                <img src="./assets/images/web_tool_flutter.png" alt="Flutter">
-              </a>
-            </li>
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume 
-            <button 
-              data-component="IconButton" 
-              type="button" 
-              aria-label="Download raw content" 
-              data-testid="download-raw-button" 
-              data-loading="false" 
-              data-no-visuals="true" 
-              data-size="small" 
-              data-variant="default" 
-              aria-describedby=":Rtcsptal9lab:-loading-announcement" 
-              data-hotkey="Control+Shift+S"
-              onclick="downloadResume()"
-              style="color: white; padding: 10px 20px; border-radius: 4px; font-size: 14px; cursor: pointer; display: inline-block; align-items: center; justify-content: center; transition: background-color 0.3s ease, border-color 0.3s ease;">
-              <svg aria-hidden="true" focusable="false" class="octicon octicon-download" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible; margin-right: 8px;">
-                <path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"></path>
-                <path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"></path>
-              </svg>
-            </button>
-          </h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">— 2025</span>
+              <span class="timeline-loc">Dubai, UAE</span>
             </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Software Engineer (Spring Boot & Laravel) at Zone Delivery Services · Full-time</h4>
-
-              <span>(Jan 2021 - Present · 4 yrs)</span>
-
-              <p class="timeline-text" style="color: #d6d6d6;">
-                <p style="font-weight: bold; color: #d6d6d6;">Duties & Responsibilities:</p>
-                <ul style="margin-left: 20px; padding-left: 0; list-style-type: none; color: #d6d6d6;">
-                    <li>- Developing and maintaining ERP web services using Java Spring Boot.</li>
-                    <li>- Managing and enhancing modules such as Company License, Vehicle License, Passports, Visa Processing, Advertisement Permits, Driving License, Emirates ID, Labor Card, Telecommunication, E-establishment Card, and Traffic Code.</li>
-                    <li>- Utilizing tools like Git, GitHub, Jira, and Postman for efficient development and collaboration.</li>
-                    <li>- Designing and documenting APIs using Swagger for seamless integration and communication.</li>
-                    <li>- Conducting database management and optimization with MySQL Workbench.</li>
-                    <li>- Leveraging AI tools like ChatGPT to enhance productivity and streamline workflows.</li>
-                </ul>
-            
-                <h5 style="color: #d6d6d6;">Zone Delivery Services · Full-time (Laravel)</h5>
-                <p style="font-weight: bold; color: #d6d6d6;">Duties & Responsibilities:</p>
-                <ul style="margin-left: 20px; padding-left: 0; list-style-type: none; color: #d6d6d6;">
-                    <li>- Developing and maintaining ERP application modules using Laravel.</li>
-                    <li>- Implementing and managing modules like RTA, COD Collection, and others to streamline business processes.</li>
-                    <li>- Collaborating with the team using Git, GitHub, and Jira for version control and task tracking.</li>
-                    <li>- Testing and debugging APIs with Postman to ensure seamless functionality.</li>
-                    <li>- Managing databases using MySQL Workbench and integrating APIs with Swagger documentation.</li>
-                    <li>- Incorporating ChatGPT to optimize problem-solving and enhance code quality.</li>
-                </ul>
-                <b style="color: white;">SKILLS: </b><span style="color: white; font-weight: bold; font-style: italic;">Spring Boot, Laravel, MySQL, Git, Jira, Postman, Swagger API, Workbench, ChatGPT</span>
-            </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Software Engineer (Laravel) at Ringer Soft · Full-time</h4>
-
-              <span>(Oct 2019 - Jan 2021 · 1 yr 4 mos)</span>
-
-              <p class="timeline-text" style="color: #d6d6d6;">
-                <p style="font-weight: bold; color: #d6d6d6;">Duties & Responsibilities:</p>
-                <ul style="margin-left: 20px; padding-left: 0; list-style-type: none; color: #d6d6d6;">
-                    <li>- Managing and enhancing ERP modules with Laravel and MySQL.</li>
-                    <li>- Developing new features and ensuring seamless integration across modules.</li>
-                    <li>- Providing client support to address and resolve issues promptly.</li>
-                    <li>- Refactoring and optimizing code structures using modern technologies.</li>
-                    <li>- Collaborating effectively with the team using Git, GitLab, and Slack for version control and communication.</li>
-                    <li>- Leveraging skills in Laravel, Spring Boot, Flutter, and MySQL to deliver scalable and user-friendly ERP solutions.</li>
-                </ul>
-                <b style="color: white;">SKILLS: </b><span style="color: white; font-weight: bold; font-style: italic;">Laravel, MySQL, Git, GitLab, Slack</span>
-            </p>
-            
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Junior Software Engineer (laravel) at CGIT · Full-time</h4>
-
-              <span>(Nov 2018 - Sep 2019 · 11 mos)</span>
-
-              <p class="timeline-text" style="color: #d6d6d6;">
-                <p style="font-weight: bold; color: #d6d6d6;">Duties & Responsibilities:</p>
-                <ul style="margin-left: 20px; padding-left: 0; list-style-type: none; color: #d6d6d6;">
-                    <li>- Planning and managing web application development projects.</li>
-                    <li>- Designing and developing databases using MySQL.</li>
-                    <li>- Building and maintaining web applications with Laravel.</li>
-                    <li>- Implementing interactive features using jQuery and responsive designs with Bootstrap.</li>
-                    <li>- Managing version control with Git and Bitbucket.</li>
-                    <li>- Collaborating and tracking tasks using tools like Trello and Slack.</li>
-                </ul>
-                <b style="color: white;">SKILLS: </b><span style="color: white; font-weight: bold; font-style: italic;">Laravel, Bootstrap, jQuery, MySQL, Git, Trello, Slack</span>
-            </p>
-            
-            </li>
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Web Designer & Developer at Corporate Solution · Full-time</h4>
-
-              <span>(Apr 2017 - Oct 2017 · 7 mos)</span>
-
-              <p class="timeline-text" style="color: #d6d6d6;">
-                <h5 style="color: #d6d6d6;">Wordpress Website Developer</h5>
-                <p style="font-weight: bold; color: #d6d6d6;">Duties & Responsibilities:</p>
-                <ul style="margin-left: 20px; padding-left: 0; list-style-type: none; color: #d6d6d6;">
-                    <li>- Web Design and Development: Creating responsive, user-friendly websites with modern tools.</li>
-                    <li>- SEO: Optimizing website content and structure for improved search engine rankings.</li>
-                    <li>- CMS: Customizing and managing WordPress websites with themes and plugins.</li>
-                    <li>- Adobe Illustrator & Photoshop: Designing graphics, logos, and promotional materials.</li>
-                    <li>- Bootstrap: Building responsive designs for consistent layouts across devices.</li>
-                    <li>- WordPress & MySQL: Developing and maintaining WordPress sites and managing databases.</li>
-                </ul>
-                <b style="color: white;">SKILLS: </b><span style="color: white; font-weight: bold; font-style: italic;">Web Design, Bootstrap, Search Engine Optimization (SEO), Adobe Illustrator, Photoshop, WordPress, MySQL</span>
-            </p>
-            
-            </li>
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Professional Trainings</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Spring Boot Unit Testing with JUnit, Mockito and MockMvc</h4>
-
-              <span>2023</span>
-
-              <p class="timeline-text">
-                successfully completed the course Spring Boot Unit Testing with JUnit, Mockito and MockMvc on 03/24/2023 as taught by Chad Darby, Eric Roby on Udemy
-                <small><i>Spring Boot JUnit, Mockito and MockMvc</i></small>.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">IsDB-BISEW IT Scholarship</h4>
-
-              <span>2018 — 2019</span>
-
-              <p class="timeline-text">
-                Successfully completed 1040 hours IsDB-BISEW Diploma in Web Application Development with PHP Frameworks.
-                <small><i>HTML5, CSS3, javaScript, Photoshop Web Addition, PHP Core, AJAX, XML, WordPress, Magento, AngularJS, ReactJS, Laravel, CodeIgniter</i></small>.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Computer Fundamental ( Prerequisite course of IsDB-BISEW IT Scholarship )</h4>
-
-              <span>2018</span>
-
-              <p class="timeline-text">
-                Successfully completed 140 hours Computer Fundamental Prerequisite course of IsDB-BISEW IT Scholarship in
-                <small><i>Basic Programming Concepts, Microsoft Office 2010 (Word, Excel, Access, Power Point, Outlook)</i></small>.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">New Horizons Internet Professional Program</h4>
-
-              <span>2017</span>
-
-              <p class="timeline-text">
-                Successfully completed 190 hours New Horizons Internet Professional Program in 
-                <small><i>HTML, CSS, Adobe Photoshop, Adove Flash, JavaScript, AJAX PHP, MySql</i></small>.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Office Management</h4>
-
-              <span>2010</span>
-
-              <p class="timeline-text">
-                Successfully completed 140 hours Office Management Training Course using  
-                <small><i>Computer Basics, Microsoft Office, Internet Browsing</i></small>.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">International Islamic University Chittagong</h4>
-
-              <span>2017 — 2018</span>
-
-              <p class="timeline-text">
-                M.B.A. Major in Finance & Banking
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">International Islamic University Chittagong</h4>
-
-              <span>2014 — 2017</span>
-
-              <p class="timeline-text">
-                B.B.A Major in Finance & Banking
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Govt. City College</h4>
-
-              <span>2010 — 2011</span>
-
-              <p class="timeline-text">
-                Higher Secondary School Certificae
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Sanowara Islam Boys' High School</h4>
-
-              <span>2009 — 2010</span>
-
-              <p class="timeline-text">
-                Secondary School Certificae
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-        
-          <ul class="skills-list content-card">
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Spring Boot</h5>
-                <data value="70">70%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Laravel</h5>
-                <data value="80">80%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">MySQL</h5>
-                <data value="60">60%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Git</h5>
-                <data value="85">85%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 85%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Jira</h5>
-                <data value="75">75%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 75%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Postman</h5>
-                <data value="65">65%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 65%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Swagger API</h5>
-                <data value="55">55%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 55%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Workbench</h5>
-                <data value="70">70%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">ChatGPT</h5>
-                <data value="90">90%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Gitlab</h5>
-                <data value="80">80%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Slack</h5>
-                <data value="70">70%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Bootstrap</h5>
-                <data value="60">60%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">jQuery</h5>
-                <data value="50">50%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Trello</h5>
-                <data value="65">65%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 65%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Web Design</h5>
-                <data value="75">75%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 75%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">SEO</h5>
-                <data value="65">65%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 65%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Adobe Illustrator</h5>
-                <data value="50">50%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Photoshop</h5>
-                <data value="60">60%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
-              </div>
-            </li>
-        
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="70">70%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-            </li>
-        
-          </ul>
-        
-        </section>
-        
-
-        <section class="clients">
-
-          <h3 class="h3 clients-title">Dev Tools</h3>
-          <br>
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/tools_ps.png" class="dev_tools_img" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/tools_ai.png" class="dev_tools_img"  alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/tools_vs_code.png" class="dev_tools_img"  alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/tools_jira_board.png"  class="dev_tools_img"  alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/tools_composer.png"  class="dev_tools_img"  alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/tools_git.png"  class="dev_tools_img"  alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-     <!-- <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
+            <h3>Software Engineer</h3>
+            <h4>Elite Zone Delivery Services</h4>
+            <ul>
+              <li>Laravel-first delivery on customer and operations platforms — Eloquent, Blade, queues, scheduled jobs.</li>
+              <li>API and integration work supporting delivery, fulfilment, and customer-facing flows.</li>
+              <li>Carried the same designation forward into X Hub Technologies in 2025.</li>
             </ul>
-
           </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Finance</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="https://github.com/imamhsn195/breakfast" target="_blank">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/brakefast.png" alt="Brakefast" loading="lazy">
-                </figure>
-              </a>
-                <h3 class="project-title">Brakefast</h3>
-                <p class="project-category">Flutter App Design</p>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article> -->
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-<!-- 
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article> -->
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115588.11853487867!2d55.15240115618249!3d25.131339239954173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6bdaffffff91%3A0xe5b4bac8cd6dc957!2sZone%20Delivery%20Services!5e0!3m2!1sen!2sae!4v1678773228010!5m2!1sen!2sae"
-              width="400" height="500" loading="lazy"></iframe>
-          </figure>
-
-        </section>
-
-        <section class="contact-form">
-          <div style="display: flex; justify-content: space-between; gap: 5px; color: #d6d6d6;">
-            <div style="flex: 1;">
-              <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="display: flex; align-items: center; margin-bottom: 15px;">
-                  <div style="margin-right: 10px;">
-                    <ion-icon name="mail-outline" role="img" class="md hydrated" aria-label="mail outline" style="color: #ffdb70;"></ion-icon>
-                  </div>
-                  <div style="display: flex; flex-direction: column;">
-                    <p style="font-weight: bold; color: #d6d6d6;">Email</p>
-                    <a href="mailto:imamhsn195@gmail.com" style="text-decoration: none; color: #d6d6d6;">imamhsn195@gmail.com</a>
-                  </div>
-                </li>
-                <li style="display: flex; align-items: center; margin-bottom: 15px;">
-                  <div style="margin-right: 10px;">
-                    <ion-icon name="phone-portrait-outline" role="img" class="md hydrated" aria-label="phone portrait outline" style="color: #ffdb70;"></ion-icon>
-                  </div>
-                  <div style="display: flex; flex-direction: column;">
-                    <p style="font-weight: bold; color: #d6d6d6;">Phone</p>
-                    <a href="tel:+971 528575908" style="text-decoration: none; color: #d6d6d6;">+971 528575908</a>
-                  </div>
-                </li>
-              </ul>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">5+ years cumulative</span>
+              <span class="timeline-loc">Remote · Bangladesh · UAE</span>
             </div>
-            <div style="flex: 1;">
-              <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="display: flex; align-items: center; margin-bottom: 15px;">
-                  <div style="margin-right: 10px;">
-                    <ion-icon name="calendar-outline" role="img" class="md hydrated" aria-label="calendar outline" style="color: #ffdb70;"></ion-icon>
-                  </div>
-                  <div style="display: flex; flex-direction: column;">
-                    <p style="font-weight: bold; color: #d6d6d6;">Birthday</p>
-                    <time datetime="1994-01-20" style="color: #d6d6d6;">January 20, 1994</time>
-                  </div>
-                </li>
-                <li style="display: flex; align-items: center; margin-bottom: 15px;">
-                  <div style="margin-right: 10px;">
-                    <ion-icon name="location-outline" role="img" class="md hydrated" aria-label="location outline" style="color: #ffdb70;"></ion-icon>
-                  </div>
-                  <div style="display: flex; flex-direction: column;">
-                    <p style="font-weight: bold; color: #d6d6d6;">Address</p>
-                    <address style="color: #d6d6d6;">
-                      <a href="https://goo.gl/maps/qGRPHGjtvpyLdoVV8" style="white-space: normal; text-decoration: none; color: #d6d6d6;">Dubai, UAE</a>
-                    </address>
-                  </div>
-                </li>
-              </ul>
-            </div>
+            <h3>Full-Stack &amp; API Engineering</h3>
+            <h4>Earlier roles &amp; freelance</h4>
+            <ul>
+              <li>Laravel-first delivery for SaaS, e-commerce, and internal tooling — Eloquent, Blade, queues, jobs, scheduled tasks.</li>
+              <li>Spring Boot services: REST APIs, JPA / Hibernate, Spring Security, AOP, automated testing with JUnit + Mockito + MockMvc.</li>
+              <li>Front-end work in Vue, Angular, and React; Next.js auth front-ends paired with Laravel Breeze backends.</li>
+              <li>Open-source side projects: Laravel packages, full-stack mess-book trio (Laravel + Express + Angular), WordPress theme work.</li>
+            </ul>
           </div>
-          
-          <!-- <h3 class="h3 form-title">Contact Form</h3>
-          <h6 class="h6 form-title" id="success-message" style="display: none;">Email sent successfully!</h6>
-          <form method="POST" action="https://script.google.com/macros/s/AKfycbxoXQp_pMutt1LN5ulS4kWVAGwVWgm1AgmWc-3EV3aOh5CfThOYn188j9_aXpLL9_kzRg/exec" class="form" id="my-form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form> -->
-
-        </section>
-
-      </article>
-
+        </div>
+      </div>
     </div>
+  </section>
 
-  </main>
+  <!-- Contact -->
+  <section class="section section-contact" id="contact">
+    <div class="container">
+      <div class="contact-card reveal">
+        <span class="section-eyebrow">06 — Contact</span>
+        <h2 class="contact-title">Have a system worth <span class="accent">building right</span>?</h2>
+        <p class="contact-sub">I'm open to senior backend, full-stack, and platform engineering roles. Happy to discuss greenfield Laravel platforms, multi-tenant rebuilds, payment, tracking, and warehouse integrations, or focused consulting.</p>
+        <div class="contact-grid">
+          <a href="mailto:imamhsn195@gmail.com" class="contact-link magnetic">
+            <span class="contact-link-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            <span class="contact-link-text">
+              <span class="contact-link-label">Email</span>
+              <span class="contact-link-value">imamhsn195@gmail.com</span>
+            </span>
+          </a>
+          <a href="https://www.linkedin.com/in/imamhsn195" target="_blank" rel="noopener noreferrer" class="contact-link magnetic">
+            <span class="contact-link-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45z"/></svg>
+            </span>
+            <span class="contact-link-text">
+              <span class="contact-link-label">LinkedIn</span>
+              <span class="contact-link-value">linkedin.com/in/imamhsn195</span>
+            </span>
+          </a>
+          <a href="https://github.com/imamhsn195" target="_blank" rel="noopener noreferrer" class="contact-link magnetic">
+            <span class="contact-link-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 0z"/></svg>
+            </span>
+            <span class="contact-link-text">
+              <span class="contact-link-label">GitHub</span>
+              <span class="contact-link-value">github.com/imamhsn195</span>
+            </span>
+          </a>
+          <a href="https://imamhasan.me" target="_blank" rel="noopener noreferrer" class="contact-link magnetic">
+            <span class="contact-link-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+            </span>
+            <span class="contact-link-text">
+              <span class="contact-link-label">Website</span>
+              <span class="contact-link-value">imamhasan.me</span>
+            </span>
+          </a>
+          <a href="tel:+971528575908" class="contact-link contact-link-wide magnetic">
+            <span class="contact-link-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <span class="contact-link-text">
+              <span class="contact-link-label">Phone · WhatsApp</span>
+              <span class="contact-link-value">+971 52 857 5908</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-row">
+        <span>© <span id="year">2026</span> Imam Hasan</span>
+        <a href="#top" class="footer-top">
+          Back to top
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7" transform="rotate(-90 12 12)"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
 
-
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-  <script>
-      window.addEventListener("load", function() {
-      const form = document.getElementById('my-form');
-      form.addEventListener("submit", function(e) {
-        e.preventDefault();
-        const data = new FormData(form);
-        const action = e.target.action;
-        fetch(action, {
-          method: 'POST',
-          body: data,
-        })
-        .then(() => {
-          document.getElementById('success-message').style.display = "block";
-          form.reset();
-          setTimeout(function(){
-            document.getElementById('success-message').style.display = "none";
-          }, 1000)
-        })
-      });
-    });
-  </script>
-<script>
-  function downloadResume() {
-    const url = 'Latest%20Resume.pdf';
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'Latest Resume.docx'; // You can set the name of the file if desired
-    link.click();
-  }
-</script>
+  <script src="script.js"></script>
 </body>
-
 </html>
