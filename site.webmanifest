@@ -1,11 +1,11 @@
 {
-  "name": "Imam Hasan — Software Engineer",
+  "name": "Imam Hasan — Senior Backend & Full-Stack Engineer",
   "short_name": "Imam Hasan",
-  "description": "Software Engineer specialising in Laravel and Spring Boot — production e-commerce, warehouse fulfilment, and payment systems.",
+  "description": "PHP & Laravel specialist building robust backends and full-stack apps, amplified by Cursor, Gemini, and Claude Code.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0a0a0a",
-  "theme_color": "#0a0a0a",
+  "background_color": "#FAFAFA",
+  "theme_color": "#FAFAFA",
   "icons": [
     { "src": "assets/images/icon-192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "assets/images/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }

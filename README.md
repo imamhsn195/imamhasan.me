@@ -1,32 +1,21 @@
 # Imam Hasan — Personal portfolio
 
-Personal portfolio and CV for [Imam Hasan](https://imamhasan.me), a software engineer based in Dubai specialising in Laravel and Spring Boot.
+Personal portfolio and CV for [Imam Hasan](https://imamhasan.me), a Senior Backend & Full-Stack Engineer specialising in PHP and Laravel, amplified by AI-assisted development (Cursor, Gemini, Claude Code).
 
 **Live site:** [https://imamhasan.me](https://imamhasan.me)
 
-## What’s included
+## What's included
 
-- `index.html` — main portfolio (about, stack, featured work, open source, experience, contact)
+- `index.html` — main portfolio (hero, stack, about, projects, contact)
 - `cv.html` — print-friendly online CV
-- `assets/Imam_Hasan_CV.pdf` — downloadable résumé
+- `assets/Imam_Hasan_CV.pdf` — downloadable resume
 - `styles.css` / `script.js` — site styles and interactions
+- `CNAME` — GitHub Pages custom domain (`imamhasan.me`)
 
 ## Local preview
-
-Open `index.html` in a browser, or serve the repo root with any static server:
 
 ```bash
 python3 -m http.server 8080
 ```
 
-Then visit `http://localhost:8080`.
-
-## Deploy
-
-Hosted on GitHub Pages with the custom domain `imamhasan.me` (see `CNAME`).
-
-## Contact
-
-- Email: [imamhsn195@gmail.com](mailto:imamhsn195@gmail.com)
-- GitHub: [imamhsn195](https://github.com/imamhsn195)
-- LinkedIn: [imamhsn195](https://www.linkedin.com/in/imamhsn195)
+Open [http://localhost:8080/](http://localhost:8080/).

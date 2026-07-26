@@ -18,14 +18,15 @@ The site is then accessible at `http://localhost:8080/`.
 
 - There is no linter, test framework, or build toolchain configured in this repo.
 - Validation is done visually by opening `index.html` in a browser.
-- External CDN resources (Ionicons, Google Fonts) require internet access to render icons and the Poppins font.
+- External CDN resources (Google Fonts: IBM Plex Sans, JetBrains Mono) require internet access.
 
 ### Key files
 
 | File | Purpose |
-|---|---|
-| `index.html` | Single-page site entry point |
-| `assets/css/style.css` | Main stylesheet |
-| `assets/css/custom.css` | Custom overrides |
-| `assets/js/script.js` | Client-side interactivity (nav, sidebar toggle, modals) |
+| --- | --- |
+| `index.html` | Single-page portfolio entry point |
+| `styles.css` | Main stylesheet |
+| `script.js` | Nav, scroll reveal, contact form |
+| `cv.html` | Print-friendly online CV |
+| `assets/Imam_Hasan_CV.pdf` | Downloadable resume |
 | `CNAME` | GitHub Pages custom domain (`imamhasan.me`) |
