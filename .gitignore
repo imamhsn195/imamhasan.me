@@ -48,3 +48,6 @@ __pycache__/
 *.old
 .Spotlight-V100
 .Trashes
+
+# Private / personal (not for GitHub Pages)
+private/
