@@ -28,5 +28,5 @@ The site is then accessible at `http://localhost:8080/`.
 | `styles.css` | Main stylesheet |
 | `script.js` | Nav, scroll reveal, contact form |
 | `cv.html` | Print-friendly online CV |
-| `assets/Imam_Hasan_CV.pdf` | Downloadable resume |
+| `assets/Imam_Hasan_Naukrigulf_CV_20Aug2026.pdf` | Downloadable resume |
 | `CNAME` | GitHub Pages custom domain (`imamhasan.me`) |

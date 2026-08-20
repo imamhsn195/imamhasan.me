@@ -8,7 +8,7 @@ Personal portfolio and CV for [Imam Hasan](https://imamhasan.me), a Senior Backe
 
 - `index.html` — main portfolio (hero, stack, about, projects, contact)
 - `cv.html` — print-friendly online CV
-- `assets/Imam_Hasan_CV.pdf` — downloadable resume
+- `assets/Imam_Hasan_Naukrigulf_CV_20Aug2026.pdf` — downloadable resume
 - `styles.css` / `script.js` — site styles and interactions
 - `CNAME` — GitHub Pages custom domain (`imamhasan.me`)
 
