@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imam Hasan — Resume</title>
+  <meta name="description" content="Print-ready two-page resume for Imam Hasan — Senior Laravel Engineer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1a4a7c;
+      --ink: #111111;
+      --muted: #333333;
+      --line: #1a4a7c;
+      --page-w: 210mm;
+      --page-h: 297mm;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #d8dde3;
+      font-size: 9.25pt;
+      line-height: 1.38;
+      padding: 18px 12px 40px;
+    }
+
+    .toolbar {
+      max-width: 210mm;
+      margin: 0 auto 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .toolbar p { font-size: 12px; color: #445; }
+    .toolbar .actions { display: flex; gap: 8px; }
+    .btn {
+      font: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      border: 1px solid #c5ccd6;
+      background: #fff;
+      color: #122;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn-primary { background: var(--navy); color: #fff; border-color: var(--navy); }
+
+    .sheet {
+      width: var(--page-w);
+      min-height: var(--page-h);
+      height: var(--page-h);
+      margin: 0 auto 18px;
+      background: #fff;
+      border: 1px solid #cfd5dd;
+      border-radius: 6px;
+      box-shadow: 0 8px 28px rgba(15, 23, 42, 0.12);
+      padding: 11mm 12mm 10mm;
+      overflow: hidden;
+      position: relative;
+      page-break-after: always;
+      break-after: page;
+    }
+    .sheet:last-of-type { page-break-after: auto; margin-bottom: 0; }
+
+    /* Header */
+    .header {
+      display: grid;
+      grid-template-columns: 28mm 1fr 24mm;
+      gap: 4.5mm;
+      align-items: start;
+      margin-bottom: 4.2mm;
+    }
+    .photo {
+      width: 28mm;
+      height: 32mm;
+      object-fit: cover;
+      object-position: center 12%;
+      display: block;
+      background: #e8ecf1;
+    }
+    .identity h1 {
+      font-size: 20pt;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.04em;
+      line-height: 1.05;
+      text-transform: uppercase;
+      margin-bottom: 1.6mm;
+    }
+    .identity .role {
+      font-size: 9pt;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 2mm;
+    }
+    .contact {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      column-gap: 2.2mm;
+      row-gap: 0.7mm;
+      font-size: 8.4pt;
+      line-height: 1.35;
+    }
+    .contact dt {
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .contact dd { color: var(--ink); }
+    .contact a {
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .qr-wrap {
+      text-align: center;
+      width: 24mm;
+    }
+    .qr-wrap img {
+      width: 22mm;
+      height: 22mm;
+      display: block;
+      margin: 0 auto;
+      image-rendering: pixelated;
+    }
+    .qr-wrap span {
+      display: block;
+      margin-top: 1mm;
+      font-size: 6.5pt;
+      line-height: 1.15;
+      color: var(--ink);
+      word-break: break-all;
+    }
+
+    /* Sections */
+    .section { margin-top: 4mm; }
+    .section-title {
+      font-size: 10pt;
+      font-weight: 700;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      line-height: 1.15;
+      margin-bottom: 1.4mm;
+    }
+    .section-rule {
+      border: 0;
+      border-top: 0.55pt solid var(--line);
+      margin: 0 0 2.4mm;
+    }
+    .summary {
+      font-size: 8.6pt;
+      line-height: 1.42;
+      text-align: justify;
+      color: var(--ink);
+    }
+
+    .job { margin-bottom: 3.4mm; }
+    .job:last-child { margin-bottom: 0; }
+    .job-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 4mm;
+    }
+    .job-title {
+      font-weight: 700;
+      font-size: 9pt;
+      color: var(--ink);
+    }
+    .job-dates {
+      font-weight: 700;
+      font-size: 8.5pt;
+      white-space: nowrap;
+      color: var(--ink);
+    }
+    .job-company {
+      font-size: 8.5pt;
+      color: var(--muted);
+      margin: 0.4mm 0 1mm;
+    }
+    .job ul {
+      margin: 0;
+      padding-left: 3.6mm;
+    }
+    .job li {
+      margin: 0 0 0.55mm;
+      padding-left: 0.4mm;
+      font-size: 8.35pt;
+      line-height: 1.38;
+    }
+
+    .edu { margin-bottom: 2.8mm; }
+    .edu:last-child { margin-bottom: 0; }
+    .edu-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 4mm;
+      align-items: baseline;
+    }
+    .edu-degree { font-weight: 700; font-size: 9pt; }
+    .edu-dates { font-weight: 700; font-size: 8.5pt; white-space: nowrap; }
+    .edu-school { font-size: 8.5pt; color: var(--muted); margin-top: 0.35mm; }
+    .edu ul {
+      margin: 0.55mm 0 0;
+      padding-left: 3.6mm;
+    }
+    .edu li {
+      margin: 0;
+      font-size: 8.2pt;
+      line-height: 1.35;
+      color: var(--muted);
+    }
+
+    .addl ul {
+      margin: 0;
+      padding-left: 3.6mm;
+    }
+    .addl li {
+      margin: 0 0 1.1mm;
+      font-size: 8.4pt;
+      line-height: 1.4;
+    }
+    .addl strong { font-weight: 700; }
+
+    .page-foot {
+      position: absolute;
+      right: 12mm;
+      bottom: 6.5mm;
+      font-size: 7pt;
+      color: #666;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+      .toolbar { display: none !important; }
+      .sheet {
+        width: 210mm;
+        height: 297mm;
+        min-height: 297mm;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        page-break-after: always;
+        break-after: page;
+      }
+      .sheet:last-of-type { page-break-after: auto; }
+      @page {
+        size: A4;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <p>Two-page A4 print resume · Press <strong>Print</strong> → Save as PDF</p>
+    <div class="actions">
+      <button class="btn btn-primary" type="button" onclick="window.print()">Print / Save PDF</button>
+      <a class="btn" href="index.html">Back to portfolio</a>
+    </div>
+  </div>
+
+  <!-- PAGE 1 -->
+  <article class="sheet" aria-label="Resume page 1">
+    <header class="header">
+      <img
+        class="photo"
+        src="assets/images/resume/profile.png?v=2"
+        alt="Imam Hasan"
+        width="106"
+        height="121"
+      />
+      <div class="identity">
+        <h1>Imam Hasan</h1>
+        <p class="role">Software Engineer | PHP &amp; Laravel · Odoo · Spring Boot</p>
+        <dl class="contact">
+          <dt>Address:</dt>
+          <dd>Ajman, United Arab Emirates (UAE)</dd>
+          <dt>Phone:</dt>
+          <dd>+971 52 857 5908</dd>
+          <dt>Email:</dt>
+          <dd><a href="mailto:imamhsn195@gmail.com">imamhsn195@gmail.com</a></dd>
+          <dt>Website:</dt>
+          <dd><a href="https://imamhasan.me">https://imamhasan.me</a></dd>
+          <dt>LinkedIn:</dt>
+          <dd><a href="https://www.linkedin.com/in/imamhsn195">https://www.linkedin.com/in/imamhsn195</a></dd>
+          <dt>GitHub:</dt>
+          <dd><a href="https://github.com/imamhsn195">https://github.com/imamhsn195</a></dd>
+        </dl>
+      </div>
+      <div class="qr-wrap">
+        <img src="assets/images/resume/portfolio-qr.png" alt="QR code to https://imamhasan.me" width="83" height="83" />
+        <span>https://imamhasan.me</span>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">Summary</h2>
+      <hr class="section-rule" />
+      <p class="summary">
+        Senior Laravel Engineer focused on building reliable, scalable web applications and APIs.
+        Core skills include PHP, Laravel, REST APIs, MySQL, JavaScript, and backend architecture —
+        with clean code, well-structured databases, secure APIs, and automated testing.
+        Uses Cursor, Claude Code, and Gemini to speed development, debugging, testing, and refactoring
+        without compromising quality. Based in Ajman, UAE and open across the Dubai/UAE market.
+        Most recently at X HUB TECHNOLOGIES L.L.C (through 15 Jul 2026), after 4+ years of Laravel and Spring Boot ERP work at Zone Delivery Services.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Work Experience</h2>
+      <hr class="section-rule" />
+
+      <div class="job">
+        <div class="job-top">
+          <p class="job-title">Software Engineer | PHP &amp; Laravel · Odoo</p>
+          <p class="job-dates">Mar 2025 – 15 Jul 2026</p>
+        </div>
+        <p class="job-company">X HUB TECHNOLOGIES L.L.C — Sharjah, United Arab Emirates</p>
+        <ul>
+          <li>Implemented and managed ecommerce functionality across multiple storefront platforms.</li>
+          <li>Handled product and inventory management: listing, categorization, stock updates, availability monitoring.</li>
+          <li>Managed sales and order processing workflows to keep operations running smoothly.</li>
+          <li>Implemented discounts, promotions, and special offers to support sales targets.</li>
+          <li>Integrated payment gateways including Network Ngenius, Tabby, Tamara, PayPal, and related providers.</li>
+          <li>Coordinated delivery and logistics with Quiqup, DHL, and Topix from listing through fulfillment.</li>
+          <li>Delivered end-to-end ecommerce operations covering catalog, payments, inventory, and delivery.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <p class="job-title">Software Engineer | PHP &amp; Laravel · Spring Boot</p>
+          <p class="job-dates">Dec 2020 – Feb 2025</p>
+        </div>
+        <p class="job-company">Zone Delivery Services — Dubai, United Arab Emirates</p>
+        <ul>
+          <li>Developed and maintained ERP web services using Java Spring Boot for government and logistics workflows.</li>
+          <li>Enhanced modules: Company/Vehicle License, Passports, Visa Processing, Advertisement Permits, Driving License.</li>
+          <li>Supported Emirates ID, Labor Card, Telecommunication, Establishment Card, and Traffic Code modules.</li>
+          <li>Built and maintained Laravel ERP modules including RTA and COD Collection.</li>
+          <li>Designed and documented APIs with Swagger; tested and debugged APIs with Postman.</li>
+          <li>Performed MySQL database management and optimization with MySQL Workbench.</li>
+          <li>Collaborated using Git, GitHub, and Jira; leveraged AI tools (ChatGPT) to accelerate delivery.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section addl">
+      <h2 class="section-title">Core Competencies</h2>
+      <hr class="section-rule" />
+      <ul>
+        <li><strong>Backend &amp; Frameworks:</strong> PHP, Laravel, Spring Boot, REST APIs, MySQL, Odoo, WordPress</li>
+        <li><strong>Delivery Focus:</strong> Web application development, API integration/testing, database management, full-stack delivery</li>
+        <li><strong>Commerce Stack:</strong> Inventory, orders, discounts, payment gateways, delivery/logistics APIs</li>
+        <li><strong>Engineering Practices:</strong> Clean architecture, Swagger docs, Postman testing, Git workflows, Jira tracking</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Featured Project</h2>
+      <hr class="section-rule" />
+      <div class="job">
+        <div class="job-top">
+          <p class="job-title">Khaytly — Tailor Shop Admin Platform (SaaS)</p>
+          <p class="job-dates">Jun 2026 – Present</p>
+        </div>
+        <p class="job-company">Personal SaaS product · <a href="https://khaytly.com">https://khaytly.com</a> · Laravel 13 / Filament 4</p>
+        <ul>
+          <li>Building a SaaS platform for tailor / tailoring business management: customers, measurement libraries, multi-item orders.</li>
+          <li>Piece-level floor workflow, production board, staff earnings, payments, deliveries, and WhatsApp/status tracking.</li>
+          <li>Deployed on cPanel with CI-gated promotions, covering tests, and a marketing site with geo-targeted affiliate tooling.</li>
+        </ul>
+      </div>
+    </section>
+    <p class="page-foot">Page 1 of 2</p>
+  </article>
+
+  <!-- PAGE 2 -->
+  <article class="sheet" aria-label="Resume page 2">
+    <section class="section" style="margin-top: 0;">
+      <h2 class="section-title">Work Experience (Continued)</h2>
+      <hr class="section-rule" />
+
+      <div class="job">
+        <div class="job-top">
+          <p class="job-title">Software Engineer (Laravel)</p>
+          <p class="job-dates">Sep 2019 – Oct 2020</p>
+        </div>
+        <p class="job-company">RingerSoft Ltd — Chittagong, Bangladesh</p>
+        <ul>
+          <li>Managed and enhanced ERP modules with Laravel and MySQL across business workflows.</li>
+          <li>Developed new features and ensured seamless integration between modules.</li>
+          <li>Provided client support, resolved issues promptly, and refactored code for maintainability.</li>
+          <li>Collaborated via Git, GitLab, and Slack; applied Laravel, Spring Boot, Flutter, and MySQL skills.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <p class="job-title">Junior Software Engineer (Laravel)</p>
+          <p class="job-dates">Nov 2018 – Sep 2019</p>
+        </div>
+        <p class="job-company">CGIT — Chittagong, Bangladesh</p>
+        <ul>
+          <li>Planned and managed web application development projects from requirements to delivery.</li>
+          <li>Designed and developed MySQL databases for Laravel applications.</li>
+          <li>Built and maintained Laravel web apps with jQuery interactions and Bootstrap responsive layouts.</li>
+          <li>Managed version control with Git and Bitbucket; tracked tasks in Trello and Slack.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <p class="job-title">Computer Programmer</p>
+          <p class="job-dates">Oct 2017 – Nov 2018</p>
+        </div>
+        <p class="job-company">IsDB BISEW — IT Scholarship — Dhaka, Bangladesh</p>
+        <ul>
+          <li>Planned and delivered web application projects using Laravel and MySQL.</li>
+          <li>Implemented interactive UI features with jQuery and responsive Bootstrap designs.</li>
+          <li>Practiced Git/Bitbucket workflows and team collaboration with Trello and Slack.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <p class="job-title">WordPress Developer</p>
+          <p class="job-dates">Apr 2017 – Oct 2017</p>
+        </div>
+        <p class="job-company">Corporate Solution — Chittagong, Bangladesh</p>
+        <ul>
+          <li>Created responsive, user-friendly websites with modern WordPress tools and Bootstrap layouts.</li>
+          <li>Optimized site content and structure for SEO; customized themes and plugins.</li>
+          <li>Designed graphics, logos, and promotional assets in Adobe Photoshop and Illustrator.</li>
+          <li>Maintained WordPress sites and MySQL databases for ongoing client delivery.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      <hr class="section-rule" />
+      <div class="edu">
+        <div class="edu-top">
+          <p class="edu-degree">IsDB BISEW IT Scholarship — Web Application Development with PHP &amp; Frameworks</p>
+          <p class="edu-dates">2018 – 2019 · 1 yr 3 mo</p>
+        </div>
+        <p class="edu-school">
+          <a href="https://www.isdb-bisew.org/it-scholarship-programme">https://www.isdb-bisew.org/it-scholarship-programme</a>
+        </p>
+      </div>
+      <div class="edu">
+        <div class="edu-top">
+          <p class="edu-degree">MBA — Master of Business Administration, Finance and Banking</p>
+          <p class="edu-dates">2017</p>
+        </div>
+        <p class="edu-school">International Islamic University Chittagong — Bangladesh</p>
+      </div>
+      <div class="edu">
+        <div class="edu-top">
+          <p class="edu-degree">BBA — Bachelor of Business Administration, Finance and Banking</p>
+          <p class="edu-dates">2012 – 2016</p>
+        </div>
+        <p class="edu-school">International Islamic University Chittagong — Bangladesh</p>
+      </div>
+    </section>
+
+    <section class="section addl">
+      <h2 class="section-title">Additional Information</h2>
+      <hr class="section-rule" />
+      <ul>
+        <li><strong>Technical Skills:</strong> PHP, Laravel, Spring Boot, REST APIs, MySQL, JavaScript, Odoo, WordPress, Bootstrap, jQuery, SEO, Testing</li>
+        <li><strong>Integrations:</strong> Payments (Network Ngenius, Tabby, Tamara, PayPal); Delivery (Quiqup, DHL, Topix, GetGive, SMSA, Halan); Messaging (Twilio SMS)</li>
+        <li><strong>Tools:</strong> Git, GitHub, GitLab, Bitbucket, Jira, Postman, Swagger API, MySQL Workbench, Trello, Slack</li>
+        <li><strong>AI Workflow:</strong> Cursor, Claude Code, Gemini, ChatGPT for faster debugging, testing, and refactoring</li>
+        <li><strong>Certifications:</strong> BTCO — Odoo Middle East; LinkedIn Learning — PHP OOP with Databases; Learning Java 17; Advanced PHP; Advanced Laravel</li>
+        <li><strong>Languages:</strong> English, Urdu, Hindi</li>
+        <li><strong>Nationality:</strong> Bangladeshi</li>
+        <li><strong>Experience:</strong> UAE ~5 years 7 months (Zone Delivery Services + X HUB TECHNOLOGIES) · Bangladesh ~3 years 6 months (Corporate Solution, IsDB BISEW, CGIT, RingerSoft)</li>
+        <li><strong>Availability:</strong> Based in Ajman, UAE · open to senior backend / full-stack roles across Dubai/UAE</li>
+        <li><strong>Online Profiles:</strong> https://imamhasan.me · https://www.linkedin.com/in/imamhsn195 · https://github.com/imamhsn195 · https://khaytly.com</li>
+      </ul>
+    </section>
+    <p class="page-foot">Page 2 of 2</p>
+  </article>
+</body>
+</html>
